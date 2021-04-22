@@ -718,7 +718,7 @@ a {
           text-decoration: underline rgba(0, 0, 0, 0.3);
   white-space: nowrap;
 }
-a:hover { color: var(--blue); }
+a:hover { color: var(--yellow); }
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a,
 .h1 > a, .h2 > a, .h3 > a, .h4 > a, .h5 > a, .h6 > a {
   text-decoration: none;
@@ -1116,7 +1116,7 @@ img.right.bottom { -o-object-position: right bottom; object-position: right bott
   --red:    rgb(238, 39, 17);
   --blue:   rgb(24, 113, 233);
   --green:  rgb(18, 192, 91);
-  --yellow: rgb(249, 191, 15);
+  --yellow: rgba(254, 220, 109);
 }
 .red    { color: var(--red); }
 .bg-red    { background-color: var(--red); }
