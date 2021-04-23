@@ -21,6 +21,8 @@ Variables
 @media only screen and (max-width: 600px) { :root {
   --fontSize: calc(100vw / 30);
 }}
+
+
 :root {
   --sansFont: "Inter";
   --monoFont: "iaw-mono";  /* "IBM Plex Mono" */
@@ -57,6 +59,7 @@ Variables
   --foreground-color-a: 1;
   --foreground-color: rgba(var(--foreground-color-rgb), var(--foreground-color-a));
   --background-color: white;
+  --text-decoration-color: rgba(var(--foreground-color-rgb), 0.5);
 }
 @supports (font-variation-settings: normal) {
   :root {
@@ -76,6 +79,15 @@ Variables
   --displayScale: 4;
   --pixel: 0.25px;
 }}
+
+@media (prefers-color-scheme:dark) {
+	:root {
+		--background-color: #333;
+		--foreground-color-rgb: 255, 255, 255;
+      --foreground-color-a: 1;
+    --foreground-color: rgba(var(--foreground-color-rgb), var(--foreground-color-a));
+	}
+}
 /*@media only screen and (max-device-width: 812px) and (orientation: landscape) { :root {
   --fontSize: 1.7vw;
 }}*/
@@ -714,8 +726,9 @@ h1.xxxlarge, .h1.xxxlarge {
 /* anchor */
 a {
   text-decoration: underline;
-  -webkit-text-decoration: underline rgba(0, 0, 0, 0.3);
-          text-decoration: underline rgba(0, 0, 0, 0.3);
+  text-decoration-color: var(--text-decoration-color);
+  -webkit-text-decoration: underline var(--text-decoration-color);
+          text-decoration: underline var(--text-decoration-color);
   white-space: nowrap;
 }
 a:hover { color: var(--yellow); }
