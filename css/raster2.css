@@ -1,6 +1,18 @@
 /* Raster v20 (dev package) (rsms.me/raster) */
 @import url('https://rsms.me/inter/inter.css');
 @import url('https://rsms.me/res/fonts/iaw.css');
+
+
+@font-face {
+  font-family: 'FoglihtenNo6';
+  src: url(fonts/FoglihtenNo06_076.otf);
+  src: url('fonts/FoglihtenNo06_076.otf');
+  src: url('fonts/FoglihtenNo06_076.woff2') format('woff2'),
+    url('fonts/FoglihtenNo06_076.woff') format('woff'),
+    url('fonts/FoglihtenNo06_076.ttf') format('truetype'),
+  font-weight: normal;
+  font-style: normal;
+}
 /*
 
 Variables
@@ -25,6 +37,7 @@ Variables
 
 :root {
   --sansFont: "Inter";
+  --decorativeFont: "FoglihtenNo06";
   --monoFont: "iaw-mono";  /* "IBM Plex Mono" */
 
   /* line height is the basis for vertical spacing */
@@ -1139,3 +1152,10 @@ img.right.bottom { -o-object-position: right bottom; object-position: right bott
 .bg-green  { background-color: var(--green); }
 .yellow { color: var(--yellow); }
 .bg-yellow { background-color: var(--yellow); }
+
+
+/* custom */
+h1.decor, h2.decor {
+  font-family: var(--decorativeFont);
+  letter-spacing: 0.05em;
+}
