@@ -4,14 +4,13 @@
 
 
 @font-face {
-  font-family: 'FoglihtenNo6';
-  src: url(fonts/FoglihtenNo06_076.otf);
-  src: url('fonts/FoglihtenNo06_076.otf');
-  src: url('fonts/FoglihtenNo06_076.woff2') format('woff2'),
-    url('fonts/FoglihtenNo06_076.woff') format('woff'),
-    url('fonts/FoglihtenNo06_076.ttf') format('truetype'),
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'FoglihtenNo06';
+  src: url('foglihtenno06.eot');
+     src: url('foglihtenno06.eot?#iefix') format('embedded-opentype'),
+          url('foglihtenno06.woff') format('woff'),
+          url('foglihtenno06.ttf') format('truetype');
+  	font-weight: normal;
+  	font-style: normal;
 }
 /*
 
