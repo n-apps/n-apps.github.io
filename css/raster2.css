@@ -479,7 +479,7 @@ html {
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
   font-variant-ligatures: contextual common-ligatures;
-  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'cv05' 1, 'ss01' 1; /* G */
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'cv05' 1, 'ss01' 1, 'zero' 1; /* G */
 }
 body {
   -webkit-overflow-scrolling: touch;
