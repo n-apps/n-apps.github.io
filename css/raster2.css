@@ -743,7 +743,7 @@ a {
           text-decoration: underline var(--text-decoration-color);
   white-space: nowrap;
 }
-a:hover { color: var(--yellow); }
+a:hover { color: var(--pink); }
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a,
 .h1 > a, .h2 > a, .h3 > a, .h4 > a, .h5 > a, .h6 > a {
   text-decoration: none;
@@ -1142,6 +1142,7 @@ img.right.bottom { -o-object-position: right bottom; object-position: right bott
   --blue:   rgb(24, 113, 233);
   --green:  rgb(18, 192, 91);
   --yellow: rgba(254, 220, 109);
+  --pink: rgba(225, 78, 130)
 }
 .red    { color: var(--red); }
 .bg-red    { background-color: var(--red); }
