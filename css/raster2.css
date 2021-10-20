@@ -30,7 +30,7 @@ Variables
   --fontSize: calc(100vw / 80);
 }
 @media only screen and (max-width: 600px) { :root {
-  --fontSize: calc(100vw / 30);
+  --fontSize: calc(100vw / 25);
 }}
 
 
