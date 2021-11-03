@@ -4,13 +4,13 @@
 
 
 @font-face {
-  font-family: 'FoglihtenNo06';
-  src: url('foglihtenno06.eot');
-     src: url('foglihtenno06.eot?#iefix') format('embedded-opentype'),
-          url('foglihtenno06.woff') format('woff'),
-          url('foglihtenno06.ttf') format('truetype');
-  	font-weight: normal;
-  	font-style: normal;
+  font-family: 'Codec';
+     src: local('Codec Cold Logo Regular'), local('Codec-Cold-Logo-Regular'),
+         url('CodecColdLogo-Regular.woff2') format('woff2'),
+         url('CodecColdLogo-Regular.woff') format('woff'),
+         url('CodecColdLogo-Regular.ttf') format('truetype');
+     font-weight: 400;
+     font-style: normal;
 }
 /*
 
@@ -36,7 +36,7 @@ Variables
 
 :root {
   --sansFont: "Inter";
-  --decorativeFont: "FoglihtenNo06";
+  --decorativeFont: "Codec";
   --monoFont: "iaw-mono";  /* "IBM Plex Mono" */
 
   /* line height is the basis for vertical spacing */
@@ -766,6 +766,7 @@ img:only-child { margin:0 }
 * + img { margin-top: calc(var(--baseline) * -1); }
 img.fill, img.cover { -o-object-fit: cover; object-fit: cover }
 r-grid > r-cell > img,
+r-grid > r-cell > a > img,
 r-grid > r-cell > p > img {
   -o-object-fit: contain;
      object-fit: contain;
