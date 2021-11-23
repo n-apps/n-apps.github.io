@@ -13,7 +13,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon/favicon.ico">
   <link rel="icon" type="image/svg+xml" sizes="any" href="favicon/favicon.svg">
-  <link rel="stylesheet" type="text/css" href="css/raster2.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/plugin/relativeTime.js"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/locale/ru.js"></script>
+
   <meta name="theme-color" content="#FEDC6D">
   <meta name="description" content="Рома Шулятьев, дизайнер и разработчик" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,29 +33,35 @@
 
 <body>
   <!-- <r-grid columns="5" class="debug"> -->
-  <r-grid columns="5">
-    <r-cell span="1-1" span-s="row">
-      <div class="center only-large-window">
-        <svg xmlns="http://www.w3.org/2000/svg" width="182" height="180" fill="none">
-          <defs />
-          <path stroke="currentColor" stroke-miterlimit="10" d="M91 180l63.6-26.3M181 90l-90 90M154.6 26.4L91 180M91 0v180M27.4 26.4L91 180M1 90l90 90M27.4 153.7L91 180" />
+    <r-grid columns="5">
+    <r-cell span="1-1" span-s="row" class="only-large-window">
+      <div class="center">
+        <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M90 179C139.153 179 179 139.153 179 90C179 40.8467 139.153 1 90 1C40.8467 1 1 40.8467 1 90C1 139.153 40.8467 179 90 179ZM90 149C122.585 149 149 122.585 149 90C149 57.4152 122.585 31 90 31C57.4152 31 31 57.4152 31 90C31 122.585 57.4152 149 90 149ZM151 90C151 123.689 123.689 151 90 151C56.3106 151 29 123.689 29 90C29 56.3106 56.3106 29 90 29C123.689 29 151 56.3106 151 90ZM90 119C106.016 119 119 106.016 119 90C119 73.9837 106.016 61 90 61C73.9837 61 61 73.9837 61 90C61 106.016 73.9837 119 90 119ZM121 90C121 107.121 107.121 121 90 121C72.8792 121 59 107.121 59 90C59 72.8792 72.8792 59 90 59C107.121 59 121 72.8792 121 90ZM90 180C139.706 180 180 139.706 180 90C180 40.2944 139.706 0 90 0C40.2944 0 0 40.2944 0 90C0 139.706 40.2944 180 90 180Z"
+            fill="currentColor" />
         </svg>
       </div>
+
     </r-cell>
 
     <r-cell span="2-4" span-s="row">
-      <h2 class="decor">Привет! Я – Рома, UX/UI дизайнер. <strike class="opacity6">Двигаю серые квадратики</strike>, улучшаю интерфейсы, иногда программирую.</h2>
+      <h1 class="decor only-large-window">Привет, я Рома!<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;UX/UI-дизайнер с&#160;опытом разработки.</p>
+      </h1>
+      <h2 class="decor only-small-window">Привет, я Рома!<p>UX/UI-дизайнер с&#160;опытом разработки.</p>
+      </h2>
     </r-cell>
-    <r-cell span="1" span-s="row">
-      <img class="fill" src="images/me.jpg">
+    <r-cell span="1" span-s="row" style="background:#5e636e;">
+      <img class="fill me" style="transform: rotate(2deg);" src="images/me.jpg">
     </r-cell>
     <r-cell span="2-4" span-s="row">
+      <p><strike class="opacity6">Двигаю серые квадратики</strike> Делаю дизайн, улучшаю интерфейсы и&#160;немножко программирую под Android.</p>
       <p>Помогаю логически организовать интерфейс, чтобы человек в нём ориентировался, предлагаю и развиваю идеи, нахожу и&#160;решаю UX-проблемы. Склонен делать вещи проще и&#160;понятнее, снижать фрустрацию людей и&#160;оптимизировать процессы.
         Предпочитаю быстрое рабочее решение – красивому макету.</p>
-      <p>У меня достаточно разнообразный опыт&#160;– от разработки, пользовательских исследований, прототипирования и визуального дизайна – до управления командой из трех дизайнеров и запуском своих пет-проектов (Android-приложения).</p>
+      <p>У меня достаточно разнообразный опыт&#160;– от разработки, пользовательских исследований, прототипирования и&#160;визуального дизайна – до управления командой из&#160;трех дизайнеров и запуском своих пет-проектов (Android-приложения).</p>
     </r-cell>
     <r-cell span="1" span-s="row">
-      <p class="only-large-window center opacity3">обн. 20 окт 2021</p>
+      <p class="only-large-window center opacity3">обн. <span id="label-ago"></span></p>
     </r-cell>
     <r-cell span="1" span-s="row" style="margin-top: calc(var(--lineHeight) * 2);">
       <h5>Прошлые проекты</h5>
@@ -62,7 +72,7 @@
       <h1 class="decor">Yesim — международный eSIM&#160;оператор</h1>
       <p>2021 — текущее время | <a href="https://yesim.app/">About</a></p>
     </r-cell>
-    <r-cell span="2-5" span-s="row">
+    <r-cell span="2-4" span-s="row">
       <h5>О проекте</h5>
       <p class="opacity8">NDA</p>
       <h5>Моя роль</h5>
@@ -76,12 +86,21 @@
         <li>Интерфейсные текста</li>
       </ul>
     </r-cell>
+    <r-cell span="5-5" class="only-large-window">
+      <div class="center">
+        <svg width="180" height="156" viewBox="0 0 180 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M180 0L167.1 22.2998H12.9L0 0H180ZM1.73375 1H178.266L166.523 21.2998H13.4768L1.73375 1ZM154.3 44.6001L141.4 66.7998H38.6L25.7 44.6001H154.3ZM27.4376 45.6001H152.562L140.825 65.7998H39.1755L27.4376 45.6001ZM51.4 89.1001L64.3 111.4H115.7L128.6 89.1001H51.4ZM53.1338 90.1001H126.866L115.123 110.4H64.8768L53.1338 90.1001ZM77.1 133.7L90 155.9L102.9 133.7H77.1ZM78.8376 134.7L90 153.91L101.162 134.7H78.8376Z"
+            fill="currentColor">
+        </svg>
+      </div>
+    </r-cell>
     <!-- SMBF -->
     <r-cell span="2-5" span-s="row" style="margin-top: calc(var(--lineHeight) * 2);">
-      <h1 class="decor">SMBF — Платформа для работы с&#160;отзывами</h1>
+      <h1 class="decor">SMBF — платформа для&#160;работы с&#160;отзывами</h1>
       <p>2020 — 2021 | <a href="https://smbf.me/">About</a></p>
     </r-cell>
-    <r-cell span="2-5" span-s="row">
+    <r-cell span="2-4" span-s="row">
       <h5>О проекте</h5>
       <p class="opacity8">NDA</p>
       <h5>Моя роль</h5>
@@ -92,13 +111,22 @@
         <li>Верстка и дизайн писем</li>
       </ul>
     </r-cell>
+    <r-cell span="5-5" class="only-large-window">
+      <div class="center">
+        <svg width="180" height="172" viewBox="0 0 180 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+            d="M63.4936 0H115.227V50.9642L164.014 35.1139L180 84.3177L131.687 100.014L161.111 140.51L119.258 170.919L89.7415 130.295L59.9182 171.341L18.0657 140.932L48.1728 99.4949L0 83.8442L15.9857 34.6404L63.4936 50.0751V0ZM63.4936 51.1193L16.6233 35.8917L1.2513 83.2066L48.5657 98.5785L63.7852 51.7331H63.4936V51.1193ZM64.8293 51.7331L49.2613 99.6515L89.2977 128.741L130.346 98.9162L115.017 51.7331H64.8293ZM131.434 99.0519L178.749 83.6801L163.377 36.3652L116.062 51.737L131.434 99.0519ZM130.482 100.045L90.2365 129.286L119.478 169.532L159.723 140.29L130.482 100.045ZM88.9398 129.708L48.6941 100.467L19.4528 140.712L59.6985 169.954L88.9398 129.708ZM65.1519 50.7401L65.189 50.6259L64.4867 50.3978V0.993048H114.234V50.7401H65.1519Z"
+            fill="black" />
+        </svg>
+      </div>
+    </r-cell>
 
     <!-- eventssion -->
     <r-cell span="2-5" span-s="row" style="margin-top: calc(var(--lineHeight) * 2);">
-      <h1 class="decor">Eventssion — платформа для продвижения и продажи билетов на&#160;различные типы мероприятий</h1>
+      <h1 class="decor">Eventssion — платформа для&#160;продвижения мероприятий</h1>
       <p>2018 — 2020 | <a href="https://eventssion.com">About</a></p>
     </r-cell>
-    <r-cell span="2-5" span-s="row">
+    <r-cell span="2-4" span-s="row">
       <h5>О проекте</h5>
       <p class="opacity8">Запуск с нуля, 30 тыс. пользователей, app/web</p>
       <h5>Моя роль</h5>
@@ -112,6 +140,16 @@
         <li>Проведение пользовательских интервью</li>
         <li>Интерфейсные текста</li>
       </ul>
+    </r-cell>
+    <r-cell span="5-5" class="only-large-window">
+      <div class="center">
+        <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M0 35.3075H36.8029V71.1123H72.6114V106.899H107.389V71.1125H143.197V35.3078H180V72.107H144.192V106.917H180V143.716H144.21V179.503H107.407V143.698H72.5929V179.503H35.79V143.716H0V106.917L35.8084 106.917V72.1067H0V35.3075ZM35.8084 71.1123V36.302H0.994475V71.1123H35.8084ZM36.8029 72.1067V106.917H71.5984V106.899H71.6169V72.1067H36.8029ZM71.5984 107.911H36.8029V142.704H71.5984V107.911ZM72.5929 142.704V107.911H72.6114V107.893H107.389V107.912H107.407V142.704H72.5929ZM108.401 143.698V178.508H143.215V143.716H143.197V143.698H108.401ZM143.197 142.704H108.401V107.912H143.197V142.704ZM144.21 142.722V142.704H144.192V107.912H179.006V142.722H144.21ZM143.197 106.917V72.107H108.383V106.899H108.401V106.917H143.197ZM71.5984 143.698H36.8029V143.716H36.7845V178.508H71.5984V143.698ZM35.8084 142.704V107.911L0.994475 107.911V142.722H35.79V142.704H35.8084ZM144.192 71.1125H179.006V36.3022H144.192V71.1125Z"
+            fill="currentColor" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M106.928 0.994475H73.1086V34.8103H106.928V0.994475ZM107.923 0V35.8047H72.1141V0H107.923Z" fill="currentColor" />
+        </svg>
+      </div>
     </r-cell>
     <r-cell span="2-5" span-s="row">
       <a href="images/ev.png">
@@ -162,19 +200,17 @@
       <img class="fill" src="images/p.gif">
     </r-cell>
 
-
     <r-cell span="1" span-s="row">
       <h5>Скиллы / Tools</h5>
     </r-cell>
     <r-cell span="4" span-s="row">
-      <h2 class="decor">Figma, Miro, Photoshop, After Affects, Android Studio, Android SDK, Java, HTML/CSS, Git, Sendgrid, Tilda</h2>
+      <h2 class="decor">Figma, Miro, Photoshop, After&#160;Affects, Android&#160;Studio, Android&#160;SDK, Java, HTML/CSS, Git, Sendgrid, Tilda</h2>
     </r-cell>
 
     <r-cell span="1" span-s="row">
-      <h5>Концепты, картинки</h5>
+      <h5>!случайные картинки</h5>
     </r-cell>
     <r-cell span="2-5" span-s="row">
-
 
       <r-grid columns="3" columns-s="row">
         <r-cell span="1" span-s="row">
@@ -182,30 +218,40 @@
             <img class="fill" src="images/wrm.jpg"></a>
         </r-cell>
         <r-cell span="1" span-s="row">
-          <img title="Spotify playlist" src="images/r.jpg">
+          <img title="Spotify playlist cover" src="images/r.jpg">
         </r-cell>
         <r-cell span="1" span-s="row">
-          <a title="мои открытые вкладки " href="https://t.me/AC6B25">
+          <a title="мои открытые вкладки" href="https://t.me/AC6B25">
             <img class="fill" src="images/ac.jpg"></a>
         </r-cell>
       </r-grid>
       <r-grid columns="3" columns-s="row">
+        <r-cell span="2" span-s="row">
+          <iframe src="https://open.spotify.com/embed/playlist/7l76Uft1j0j2p4pdLjGvUP?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" style="min-height:100%;"></iframe>
+        </r-cell>
         <r-cell span="1" span-s="row">
-          <img title="app logo concept" src="images/sc.jpg">
+          <a title="«какую музыку слушаешь???»" href="https://open.spotify.com/playlist/7l76Uft1j0j2p4pdLjGvUP?si=0762b4d5b5d048fd">
+            <img class="fill" src="images/sp.jpg"></a>
         </r-cell>
         <r-cell span="1" span-s="row">
           <a title="мой проект с локальным мерчем" href="https://www.instagram.com/treeckon/">
-            <img src="images/treeckon.jpg"></a>
+            <img src="images/treeckon1.jpg"></a>
         </r-cell>
         <r-cell span="1" span-s="row">
           <a title="мой проект с локальным мерчем" href="https://www.instagram.com/treeckon/">
-            <img class="fill" src="images/hot.jpg"></a>
+            <img title="мой проект с локальным мерчем" src="images/treeckon2.jpg"></a>
+        </r-cell>
+        <r-cell span="1" span-s="row" class="egg">
+          <img src="images/tbd.gif" alt="Our Next Project">
+          </div>
         </r-cell>
       </r-grid>
     </r-cell>
 
     <!-- Footer -->
-    <r-cell span="row" style="margin-top: calc(var(--lineHeight) * 2);">
+    <r-cell span="row">
+      <footer>
       <div id="fi" style="margin-left:calc(var(--lineHeight) * 4); margin-bottom: unset;display: grid;">
         <svg xmlns="http://www.w3.org/2000/svg" width="182" height="180" fill="none">
           <defs />
@@ -213,7 +259,7 @@
         </svg>
       </div>
       <hr style="margin-top: unset;">
-      <p class="center only-large-window">
+      <p class="center only-large-window margin3">
         <a class="padding1" href="mailto:roman.novodvorskiy@gmail.com">Email</a>•
         <a class="padding1" href="https://drive.google.com/file/d/12M837NJMUpf4JkK4nffzKsV-qFFwbs0b/view?usp=sharing">CV</a>•
         <a class="padding1" href="https://t.me/artificially_busy">Telegram</a>•
@@ -231,10 +277,10 @@
         <li><a class="padding1" href="https://www.instagram.com/artificially.busy/">Instagram</a></li>
         <li><a class="padding1" href="https://open.spotify.com/user/artificially_busy?si=FGW7GE86SXmipcw9meJHpQ">Spotify</a></li>
       </ul>
-      <h4 class="center"><strike class="opacity2">2020 sucks</strike> 2021 rocks</h4>
+      <p class="center monospace "><strike class="opacity2">2020 sucks</strike> 2021 rocks</p>
+    </footer>
     </r-cell>
   </r-grid>
-
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDXZ0J24WP"></script>
@@ -248,12 +294,7 @@
 
     gtag('config', 'G-YDXZ0J24WP');
   </script>
-  <!-- OPEN LINKS IN A NEW TAB. -->
-  <script type="text/javascript">
-    Array.prototype.forEach.call(document.getElementsByTagName('a'), function(link) {
-      link.target = "_blank"
-    })
-  </script>
+  <script type='text/javascript' src="js/script.js"></script>
 </body>
 
 </html>
