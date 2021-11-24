@@ -107,41 +107,38 @@ Variables
 /*@media only screen and (max-device-width: 812px) and (orientation: landscape) { :root {
   --fontSize: 1.7vw;
 }}*/
-/* reset */
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 * {
-  font: inherit;
-  line-height: inherit;
-}
-
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote,
-body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt,
-em, embed, fieldset, figcaption, figure, footer, form, grid, h1, h2, h3, h4, h5,
-h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, main,
-mark, menu, nav, noscript, object, ol, output, p, pre, q, s, samp, section,
-small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th,
-thead, time, tr, tt, u, ul, var, video {
   margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
 }
 
-blockquote, q {
-  quotes: none;
+html, body {
+  height: 100%;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-  content: none;
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
 
-a, a:active, a:visited {
-  color: inherit;
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
 /* Raster grid subsystem (rsms.me/raster) */
@@ -1808,6 +1805,7 @@ a {
   -webkit-text-decoration: underline var(--text-decoration-color);
   text-decoration: underline var(--text-decoration-color);
   white-space: nowrap;
+  color: inherit;
 }
 
 a:hover {
@@ -2730,4 +2728,23 @@ h1.decor, h2.decor {
 
 .egg:hover .hover-egg {
   display: block;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0.25em 0.25em 0.75em rgba(170, 198, 215, .25), 0.125em 0.125em 0.25em rgba(170, 198, 215, .20);
+  transform: scale(1.045);
+  transition: all 0.5s ease-in-out;
+}
+
+.my-avatar {
+  background: #5e636e;
+}
+
+.my-avatar img {
+  transform: rotate(2deg);
+}
+
+.my-avatar img:hover {
+  transform: scale(1) rotate(0deg);
+  transition: all 0.5s ease;
 }
