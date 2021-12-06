@@ -42,14 +42,11 @@
             fill="currentColor" />
         </svg>
       </div>
-
     </r-cell>
 
     <r-cell span="2-4" span-s="row">
-      <h1 class="decor only-large-window">Привет, я Рома!<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;UX/UI-дизайнер с&#160;опытом разработки.</p>
-      </h1>
-      <h2 class="decor only-small-window">Привет, я Рома!<p>UX/UI-дизайнер с&#160;опытом разработки.</p>
-      </h2>
+      <h1 class="decor only-large-window">Привет, я Рома!<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;UX/UI-дизайнер с&#160;опытом разработки.</h1>
+      <h2 class="decor only-small-window">Привет, я Рома!<br>UX/UI-дизайнер с&#160;опытом разработки.</h2>
     </r-cell>
     <r-cell span="1" span-s="row" class="my-avatar">
       <img class="fill" src="images/me.jpg">
@@ -63,12 +60,15 @@
     <r-cell span="1" span-s="row">
       <p class="only-large-window center opacity3">обн. <span id="label-ago"></span></p>
     </r-cell>
-    <r-cell span="1" span-s="row" style="margin-top: calc(var(--lineHeight) * 2);">
-      <h5>Прошлые проекты</h5>
-    </r-cell>
 
+    <!-- Прошлые проекты -->
+    <r-cell span="1" span-s="row">
+      <hr class="opacity0">
+      <h2>Прошлые проекты</h2>
+    </r-cell>
     <!-- Yesim -->
-    <r-cell span="2-5" span-s="row" style="margin-top: calc(var(--lineHeight) * 2);">
+    <r-cell span="2-5" span-s="row">
+      <hr class="opacity8">
       <h1 class="decor">Yesim — международный eSIM&#160;оператор</h1>
       <p>2021 — текущее время | <a href="https://yesim.app/">About</a></p>
     </r-cell>
@@ -95,6 +95,11 @@
         </svg>
       </div>
     </r-cell>
+
+    <r-cell span="2-5">
+      <hr class="opacity8"></span>
+    </r-cell>
+
     <!-- SMBF -->
     <r-cell span="2-5" span-s="row" style="margin-top: calc(var(--lineHeight) * 2);">
       <h1 class="decor">SMBF — платформа для&#160;работы с&#160;отзывами</h1>
@@ -119,6 +124,10 @@
             fill="black" />
         </svg>
       </div>
+    </r-cell>
+
+    <r-cell span="2-5">
+      <hr class="opacity8"></span>
     </r-cell>
 
     <!-- eventssion -->
@@ -151,23 +160,30 @@
         </svg>
       </div>
     </r-cell>
-    <r-cell span="2-5" span-s="row">
-      <a href="images/ev.png">
-        <img class="fill" src="images/ev.png">
-      </a>
+
+    <r-cell span="2-5">
+      <hr class="opacity8"></span>
     </r-cell>
+
+    <!-- Личные проекты -->
     <r-cell span="1" span-s="row">
-      <h5>Личные проекты</h5>
+      <h1>Личные проекты</h1>
     </r-cell>
+
+    <!-- Счетчик Очков -->
     <r-cell span="2-5" span-s="row">
-      <h1 class="decor">Счетчик Очков</h1>
+      <h2 class="decor">Счетчик Очков</h2>
       <p>c 2016-го | <a href="https://play.google.com/store/apps/details?id=ua.napps.scorekeeper">Android-приложение</a></p>
     </r-cell>
+
     <r-cell span="2-3" span-s="row">
       <h5>О проекте</h5>
       <p>Счетчик Очков помогает вести счет в настольных играх, спорте или других занятиях. Больше 100 тысяч установок, open-sourced (с 2019-го)</p>
       <h5>Моя роль</h5>
-      <p>Идея, разработка, дизайн, размещение в магазине, маркетинг, АБ-тесты.
+      <p>Идея, разработка, дизайн, размещение в магазине, маркетинг, АБ-тесты.</p>
+
+    </r-cell>
+    <r-cell span="4-5" span-s="row">
       <h5>Циферки (сентябрь 2021)</h5>
       <ul class="compact">
         <li>1-е место в поисковой выдаче</li>
@@ -178,14 +194,40 @@
         <li>438 коммитов (из них мои – 352)</li>
       </ul>
     </r-cell>
-    <r-cell span="4-5" span-s="row">
-      <img class="fill" src="images/sc.gif">
+
+    <r-cell span="2-5" span-s="row">
+      <r-grid columns="3" columns-s="row">
+        <r-cell span="1" span-s="row">
+          <img class="fill portfolio-item" src="images/sc1.jpg">
+        </r-cell>
+
+        <r-cell span="1" span-s="row">
+          <img class="fill portfolio-item" src="images/sc2.jpg">
+        </r-cell>
+
+        <r-cell span="1" span-s="row">
+          <img class="fill portfolio-item" src="images/sc3.jpg">
+        </r-cell>
+
+        <r-cell span="3" class="only-large-window" span-s="row">
+          <img class="fill portfolio-item" src="images/sc4.jpg">
+        </r-cell>
+
+      </r-grid>
     </r-cell>
+    </r-cell>
+
+    <r-cell span="2-5">
+      <hr class="opacity8"></span>
+    </r-cell>
+
+    <!-- Параграфус -->
+
     <r-cell span="2-5" span-s="row">
       <h1 class="decor">Параграфус</h1>
       <p>2020 | <a href="https://play.google.com/store/apps/details?id=com.napps.paragraphus">Android-приложение</a></p>
     </r-cell>
-    <r-cell span="2-3" span-s="row">
+    <r-cell span="2-4" span-s="row">
       <h5>О проекте</h5>
       <p>«Параграфус» подкидывает вам страницу текста из различных книг, а вы должны решить — интересно или нет.</p>
       <h5>Моя роль</h5>
@@ -194,8 +236,25 @@
       <p>Ровный стиль: <a href="https://t.me/ocaptainmycaptain228">Николай Сыпко</a><br>
         Оригинальная идея и контент: <a href="https://nocover.ru/">nocover.ru</a></p>
     </r-cell>
-    <r-cell span="4-5" span-s="row">
-      <img class="fill" src="images/p.gif">
+    <r-cell span="2-5" span-s="row">
+      <r-grid columns="3" columns-s="row">
+        <r-cell span="1" span-s="row">
+          <img class="fill portfolio-item" src="images/p1.jpg">
+        </r-cell>
+
+        <r-cell span="1" span-s="row">
+          <img class="fill portfolio-item" src="images/p2.jpg">
+        </r-cell>
+
+        <r-cell span="1" span-s="row">
+          <img class="fill portfolio-item" src="images/p3.jpg">
+        </r-cell>
+
+        <r-cell span="3" class="only-large-window" span-s="row">
+          <img class="fill portfolio-item" src="images/p4.jpg">
+        </r-cell>
+
+      </r-grid>
     </r-cell>
 
     <r-cell span="1" span-s="row">
@@ -205,6 +264,7 @@
       <h2 class="decor">Figma, Miro, Photoshop, After&#160;Affects, Android&#160;Studio, Android&#160;SDK, Java, HTML/CSS, Git, Sendgrid, Tilda</h2>
     </r-cell>
 
+    <!-- Картинки -->
     <r-cell span="1" span-s="row">
       <h5>!случайные картинки</h5>
     </r-cell>
@@ -247,7 +307,6 @@
 
         <r-cell span="1" span-s="row" class="egg">
           <img class="fill" src="images/tbd.gif" alt="Our Next Project">
-          </div>
         </r-cell>
       </r-grid>
     </r-cell>
