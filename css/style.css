@@ -47,7 +47,7 @@ Variables
   --blockSpacingTop: 0px;
   --blockSpacingBottom: var(--lineHeight);
   /* horizontal rule */
-  --hrThickness: 2px;
+  --hrThickness: 1px;
   /* heading size */
   --h1-size: 2.8rem;
   --h2-size: 2.2rem;
@@ -2719,17 +2719,6 @@ h1.decor, h2.decor {
   letter-spacing: 0.05em;
 }
 
-.egg .hover-over {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: none;
-}
-
-.egg:hover .hover-egg {
-  display: block;
-}
-
 .portfolio-item:hover {
   box-shadow: 0.25em 0.25em 0.75em rgba(170, 198, 215, .25), 0.125em 0.125em 0.25em rgba(170, 198, 215, .20);
   transform: scale(1.045);
@@ -2747,4 +2736,14 @@ h1.decor, h2.decor {
 .my-avatar img:hover {
   transform: scale(1) rotate(0deg);
   transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 600px) {
+  .section-title {
+    margin-top: calc(var(--lineHeight) * 4);
+  }
+
+  hr, hr:only-child {
+    margin-top: unset;
+  }
 }
