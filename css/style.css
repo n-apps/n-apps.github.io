@@ -63,7 +63,7 @@ Variables
   --foreground-color-rgb: 0, 0, 0;
   --foreground-color-a: 1;
   --foreground-color: rgba(var(--foreground-color-rgb), var(--foreground-color-a));
-  --background-color: white;
+  --background-color: #f2f0ea;
   --text-decoration-color: rgba(var(--foreground-color-rgb), 0.5);
 }
 
