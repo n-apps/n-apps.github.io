@@ -3,10 +3,9 @@
 @import url('https://rsms.me/res/fonts/iaw.css');
 
 @font-face {
-  font-family: 'Mak';
-  src: url('Mak-Bold.woff') format('woff'),
-    url('Mak-Bold.otf') format('opentype');
-  font-weight: 700;
+  font-family: 'Paragon';
+  src: url('430c.otf') format('opentype');
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -36,7 +35,7 @@ Variables
 
 :root {
   --sansFont: "Inter";
-  --decorativeFont: "Mak";
+  --decorativeFont: "Paragon";
   --monoFont: "iaw-mono";
   /* "IBM Plex Mono" */
   /* line height is the basis for vertical spacing */
@@ -49,9 +48,9 @@ Variables
   /* horizontal rule */
   --hrThickness: 1px;
   /* heading size */
-  --h1-size: 2.8rem;
-  --h2-size: 2.2rem;
-  --h3-size: 1.4rem;
+  --h1-size: 2.2rem;
+  --h2-size: 1.8rem;
+  --h3-size: 1.3rem;
   --h4-size: 1.1rem;
   /* grid spacing */
   --columnGap: calc(var(--lineHeight) * 2);
@@ -2716,7 +2715,6 @@ img.right.bottom {
 /* custom */
 h1.decor, h2.decor {
   font-family: var(--decorativeFont);
-  letter-spacing: 0.05em;
 }
 
 .portfolio-item:hover {
@@ -2725,12 +2723,8 @@ h1.decor, h2.decor {
   transition: all 0.5s ease-in-out;
 }
 
-.my-avatar {
-  background: #5e636e;
-}
-
 .my-avatar img {
-  transform: rotate(2deg);
+  transform: rotate(1deg);
 }
 
 .my-avatar img:hover {
