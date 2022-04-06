@@ -4,6 +4,6 @@ Array.prototype.forEach.call(document.getElementsByTagName('a'), function(link) 
 
 dayjs.locale('ru')
 dayjs.extend(window.dayjs_plugin_relativeTime)
-const date = dayjs('2022-03-15');
+const date = dayjs('2022-04-22');
 
 document.getElementById("label-ago").innerHTML = date.fromNow();
