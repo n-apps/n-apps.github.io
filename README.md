@@ -1,1 +1,1 @@
-Мой блог / портфолио 
+My personal page
