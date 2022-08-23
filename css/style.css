@@ -35,7 +35,7 @@ Variables
 
 :root {
   --sansFont: "Inter";
-  --decorativeFont: "Paragon";
+  --decorativeFont: "Arnold sans";
   --monoFont: "iaw-mono";
   /* "IBM Plex Mono" */
   /* line height is the basis for vertical spacing */
@@ -1360,7 +1360,7 @@ html {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   font-variant-ligatures: contextual common-ligatures;
-  font-feature-settings: 'kern'1, 'liga'1, 'calt'1, 'cv05'1, 'ss01'1, 'zero'1;
+
   /* G */
 }
 
@@ -1652,7 +1652,7 @@ h {
 
 h, h1, .h1 {
   font-weight: 720;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.01em;
   font-size: var(--h1-size);
   line-height: calc(var(--lineHeight) * 2);
   margin-left: calc(var(--h1-size) / -22);
@@ -1674,7 +1674,7 @@ h1.single-line:first-child {
 
 h2, .h2 {
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   font-size: var(--h2-size);
   line-height: calc(var(--lineHeight) * 2);
   margin-left: calc(var(--h2-size) / -26);
@@ -2730,6 +2730,7 @@ h1.decor, h2.decor {
 .my-avatar img:hover {
   transform: scale(1) rotate(0deg);
   transition: all 0.5s ease;
+  filter:grayscale();
 }
 
 @media only screen and (max-width: 600px) {
