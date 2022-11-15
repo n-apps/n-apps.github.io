@@ -1,12 +1,59 @@
 /* Raster v20 (dev package) (rsms.me/raster) */
-@import url('https://rsms.me/inter/inter.css');
 @import url('https://rsms.me/res/fonts/iaw.css');
 
 @font-face {
-  font-family: 'Arnold sans';
-  src: url('as.otf') format('opentype');
-  font-weight: 400;
+  font-family: 'MacPawFixelDisplay';
+  src: url('MacPawFixelDisplay-Thin.woff2') format('woff2'),
+    /* Modern Browsers */
+    url('MacPawFixelDisplay-Thin.otf') format('opentype');
+  /* Safari, Android, iOS */
   font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'MacPawFixelDisplay';
+  src: url('MacPawFixelDisplay-SemiBold.woff2') format('woff2'),
+    /* Modern Browsers */
+    url('MacPawFixelDisplay-SemiBold.otf') format('opentype');
+  /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'MacPawFixelText';
+  src: url('MacPawFixelText-Light.woff2') format('woff2'),
+    /* Modern Browsers */
+    url('MacPawFixelText-Light.otf') format('opentype');
+  /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'MacPawFixelText';
+  src: url('MacPawFixelText-Regular.woff2') format('woff2'),
+    /* Modern Browsers */
+    url('MacPawFixelText-Regular.otf') format('opentype');
+  /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'MacPawFixelText';
+  src: url('MacPawFixelText-Bold.woff2') format('woff2'),
+    /* Modern Browsers */
+    url('MacPawFixelText-Bold.otf') format('opentype');
+  /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
 }
 
 /*
@@ -34,8 +81,8 @@ Variables
 }
 
 :root {
-  --sansFont: "Inter";
-  --decorativeFont: "Arnold sans";
+  --sansFont: "MacPawFixelText";
+  --displayFont: "MacPawFixelDisplay";
   --monoFont: "iaw-mono";
   /* "IBM Plex Mono" */
   /* line height is the basis for vertical spacing */
@@ -64,11 +111,11 @@ Variables
   --foreground-color: rgba(var(--foreground-color-rgb), var(--foreground-color-a));
   --background-color: #f2f0ea;
   --text-decoration-color: rgba(var(--foreground-color-rgb), 0.5);
+  --accent-color: #D3E8E1;
 }
 
 @supports (font-variation-settings: normal) {
   :root {
-    --sansFont: "Inter var";
     --monoFont: "iaw-mono-var";
   }
 }
@@ -100,6 +147,7 @@ Variables
     --foreground-color-rgb: 255, 255, 255;
     --foreground-color-a: 1;
     --foreground-color: rgba(var(--foreground-color-rgb), var(--foreground-color-a));
+    --accent-color: #3B465C;
   }
 }
 
@@ -1360,7 +1408,6 @@ html {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   font-variant-ligatures: contextual common-ligatures;
-
   /* G */
 }
 
@@ -1651,8 +1698,9 @@ h {
 }
 
 h, h1, .h1 {
-  font-weight: 720;
+  font-weight: 400;
   letter-spacing: -0.01em;
+  font-family: var(--displayFont);
   font-size: var(--h1-size);
   line-height: calc(var(--lineHeight) * 2);
   margin-left: calc(var(--h1-size) / -22);
@@ -1673,8 +1721,9 @@ h1.single-line:first-child {
 }
 
 h2, .h2 {
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.02em;
+  font-family: var(--displayFont);
   font-size: var(--h2-size);
   line-height: calc(var(--lineHeight) * 2);
   margin-left: calc(var(--h2-size) / -26);
@@ -1693,7 +1742,8 @@ h2.single-line:first-child {
 }
 
 h3, .h3, h4, .h4 {
-  font-weight: 700;
+  font-weight: 400;
+  font-family: var(--displayFont);
   letter-spacing: -0.02em;
   font-size: var(--h3-size);
   padding-top: calc(var(--baseline) * 0.75);
@@ -1702,7 +1752,7 @@ h3, .h3, h4, .h4 {
 }
 
 h4, .h4 {
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.012em;
   font-size: var(--h4-size);
 }
@@ -2712,11 +2762,6 @@ img.right.bottom {
   background-color: var(--yellow);
 }
 
-/* custom */
-h1.decor, h2.decor {
-  font-family: var(--decorativeFont);
-}
-
 .portfolio-item:hover {
   box-shadow: 0.25em 0.25em 0.75em rgba(170, 198, 215, .25), 0.125em 0.125em 0.25em rgba(170, 198, 215, .20);
   transform: scale(1.045);
@@ -2730,8 +2775,21 @@ h1.decor, h2.decor {
 .my-avatar img:hover {
   transform: scale(1) rotate(0deg);
   transition: all 0.5s ease;
-  filter:grayscale();
+  filter: grayscale();
 }
+
+.header-bg {
+  background: var(--accent-color);
+  width: 100%;
+  height: calc(var(--lineHeight) * 20);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  content: '';
+  border-radius: 0 0 25px 25px;
+}
+
 
 @media only screen and (max-width: 600px) {
   .section-title {
