@@ -2781,7 +2781,7 @@ img.right.bottom {
 .header-bg {
   background: var(--accent-color);
   width: 100%;
-  height: calc(var(--lineHeight) * 20);
+  height: calc(var(--lineHeight) * 21);
   position: absolute;
   z-index: -1;
   top: 0;
