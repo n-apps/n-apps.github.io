@@ -2763,7 +2763,6 @@ img.right.bottom {
 }
 
 .portfolio-item:hover {
-  box-shadow: 0.25em 0.25em 0.75em rgba(170, 198, 215, .25), 0.125em 0.125em 0.25em rgba(170, 198, 215, .20);
   transform: scale(1.045);
   transition: all 0.5s ease-in-out;
 }
@@ -2778,18 +2777,9 @@ img.right.bottom {
   filter: grayscale();
 }
 
-.header-bg {
-  background: var(--accent-color);
-  width: 100%;
-  height: calc(var(--lineHeight) * 21);
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  content: '';
-  border-radius: 0 0 25px 25px;
+footer a {
+  font-size: var(--h2-size);
 }
-
 
 @media only screen and (max-width: 600px) {
   .section-title {
