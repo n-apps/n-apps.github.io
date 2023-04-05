@@ -25,17 +25,6 @@
 
 @font-face {
   font-family: 'MacPawFixelText';
-  src: url('MacPawFixelText-Light.woff2') format('woff2'),
-    /* Modern Browsers */
-    url('MacPawFixelText-Light.otf') format('opentype');
-  /* Safari, Android, iOS */
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: 'MacPawFixelText';
   src: url('MacPawFixelText-Regular.woff2') format('woff2'),
     /* Modern Browsers */
     url('MacPawFixelText-Regular.otf') format('opentype');
