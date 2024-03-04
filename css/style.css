@@ -84,7 +84,7 @@ Variables
   /* horizontal rule */
   --hrThickness: 1px;
   /* heading size */
-  --h1-size: 2.2rem;
+  --h1-size: 2rem;
   --h2-size: 1.8rem;
   --h3-size: 1.3rem;
   --h4-size: 1.1rem;
@@ -98,9 +98,9 @@ Variables
   --foreground-color-rgb: 0, 0, 0;
   --foreground-color-a: 1;
   --foreground-color: rgba(var(--foreground-color-rgb), var(--foreground-color-a));
-  --background-color: #f2f0ea;
+  --background-color: #ffffff;
   --text-decoration-color: rgba(var(--foreground-color-rgb), 0.5);
-  --accent-color: #D3E8E1;
+  --accent-color: #9C9CDD;
 }
 
 @supports (font-variation-settings: normal) {
@@ -1847,7 +1847,7 @@ a {
 }
 
 a:hover {
-  color: var(--pink);
+  color: var(--torn);
 }
 
 h1>a, h2>a, h3>a, h4>a, h5>a, h6>a,
@@ -2188,9 +2188,6 @@ p+table {
   flex-direction: column
 }
 
-/* relative positioning */
-.top {}
-
 .left {
   text-align: left
 }
@@ -2199,7 +2196,6 @@ p+table {
   text-align: right
 }
 
-.bottom {}
 
 .center {
   text-align: center
@@ -2716,7 +2712,7 @@ img.right.bottom {
   --blue: rgb(24, 113, 233);
   --green: rgb(18, 192, 91);
   --yellow: rgba(254, 220, 109);
-  --pink: rgba(225, 78, 130)
+  --torn: rgba(156, 156, 221)
 }
 
 .red {
