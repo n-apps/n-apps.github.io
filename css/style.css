@@ -1,6 +1,3 @@
-/* Raster v20 (dev package) (rsms.me/raster) */
-@import url('https://rsms.me/res/fonts/iaw.css');
-
 @font-face {
   font-family: 'MacPawFixelDisplay';
   src: url('MacPawFixelDisplay-Thin.woff2') format('woff2'),
@@ -72,8 +69,6 @@ Variables
 :root {
   --sansFont: "MacPawFixelText";
   --displayFont: "MacPawFixelDisplay";
-  --monoFont: "iaw-mono";
-  /* "IBM Plex Mono" */
   /* line height is the basis for vertical spacing */
   --lineHeight: calc(var(--fontSize) * 1.5);
   /* horizontal and vertical spacing basis */
@@ -103,11 +98,6 @@ Variables
   --accent-color: #9C9CDD;
 }
 
-@supports (font-variation-settings: normal) {
-  :root {
-    --monoFont: "iaw-mono-var";
-  }
-}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
   :root {
@@ -1649,7 +1639,7 @@ i, em, .italic {
 
 /* preformatted text */
 pre, code, tt, .code, .monospace {
-  font-family: var(--monoFont), Inconsolata, Menlo, monospace;
+  font-family: Inconsolata, Menlo, monospace;
   font-weight: 430;
   word-wrap: break-word;
   white-space: pre-wrap;
