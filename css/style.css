@@ -1,47 +1,3 @@
-@font-face {
-  font-family: 'MacPawFixelDisplay';
-  src: url('MacPawFixelDisplay-Thin.woff2') format('woff2'),
-    /* Modern Browsers */
-    url('MacPawFixelDisplay-Thin.otf') format('opentype');
-  /* Safari, Android, iOS */
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: 'MacPawFixelDisplay';
-  src: url('MacPawFixelDisplay-SemiBold.woff2') format('woff2'),
-    /* Modern Browsers */
-    url('MacPawFixelDisplay-SemiBold.otf') format('opentype');
-  /* Safari, Android, iOS */
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: 'MacPawFixelText';
-  src: url('MacPawFixelText-Regular.woff2') format('woff2'),
-    /* Modern Browsers */
-    url('MacPawFixelText-Regular.otf') format('opentype');
-  /* Safari, Android, iOS */
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: 'MacPawFixelText';
-  src: url('MacPawFixelText-Bold.woff2') format('woff2'),
-    /* Modern Browsers */
-    url('MacPawFixelText-Bold.otf') format('opentype');
-  /* Safari, Android, iOS */
-  font-style: normal;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-}
-
 /*
 
 Variables
@@ -57,18 +13,18 @@ Variables
   /*
 
   Veiwport-relative (100% / EMs-across-viewport) */
-  --fontSize: calc(100vw / 80);
+  --fontSize: calc(100vw / 90);
 }
 
 @media only screen and (max-width: 600px) {
   :root {
-    --fontSize: calc(100vw / 25);
+    --fontSize: calc(100vw / 30);
   }
 }
 
 :root {
-  --sansFont: "MacPawFixelText";
-  --displayFont: "MacPawFixelDisplay";
+  --sansFont: ui-sans-serif, system-ui, sans-serif, var(--emoji);
+  --displayFont: ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif, var(--emoji);
   /* line height is the basis for vertical spacing */
   --lineHeight: calc(var(--fontSize) * 1.5);
   /* horizontal and vertical spacing basis */
@@ -1639,7 +1595,7 @@ i, em, .italic {
 
 /* preformatted text */
 pre, code, tt, .code, .monospace {
-  font-family: Inconsolata, Menlo, monospace;
+  font-family:  ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace, var(--emoji);
   font-weight: 430;
   word-wrap: break-word;
   white-space: pre-wrap;
