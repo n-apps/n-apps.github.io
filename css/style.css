@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Onest:wght@100..900&display=swap');
+
 /*
 
 Variables
@@ -22,8 +24,8 @@ Variables
 } */
 
 :root {
-  --sansFont: ui-sans-serif, system-ui, sans-serif, var(--emoji);
-  --displayFont: ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif, var(--emoji);
+  --sansFont: "Onest", ui-sans-serif, system-ui, sans-serif;
+  --displayFont:"Freeman", ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
   /* line height is the basis for vertical spacing */
   --lineHeight: calc(var(--fontSize) * 1.5);
   /* horizontal and vertical spacing basis */
@@ -52,7 +54,6 @@ Variables
   --text-decoration-color: rgba(var(--foreground-color-rgb), 0.5);
   --accent-color: #9C9CDD;
 }
-
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
   :root {
@@ -1331,17 +1332,18 @@ r-grid.debug> :nth-child(6n+7) {
 
 /* document */
 html {
-  font-family: var(--sansFont), -system-ui, system-ui, sans-serif;
+  font-family: var(--sansFont);
   font-size: var(--fontSize);
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
   line-height: var(--lineHeight);
   background: var(--background-color);
   color: var(--foreground-color);
-  letter-spacing: -0.01em;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  font-variant-ligatures: contextual common-ligatures;
   /* G */
 }
 
@@ -1594,7 +1596,7 @@ i, em, .italic {
 
 /* preformatted text */
 pre, code, tt, .code, .monospace {
-  font-family:  ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace, var(--emoji);
+  font-family:  ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
   font-weight: 430;
   word-wrap: break-word;
   white-space: pre-wrap;
@@ -1633,7 +1635,6 @@ h {
 
 h, h1, .h1 {
   font-weight: 400;
-  letter-spacing: -0.01em;
   font-family: var(--displayFont);
   font-size: var(--h1-size);
   line-height: calc(var(--lineHeight) * 2);
@@ -1656,7 +1657,6 @@ h1.single-line:first-child {
 
 h2, .h2 {
   font-weight: 400;
-  letter-spacing: -0.02em;
   font-family: var(--displayFont);
   font-size: var(--h2-size);
   line-height: calc(var(--lineHeight) * 2);
@@ -1677,8 +1677,6 @@ h2.single-line:first-child {
 
 h3, .h3, h4, .h4 {
   font-weight: 400;
-  font-family: var(--displayFont);
-  letter-spacing: -0.02em;
   font-size: var(--h3-size);
   padding-top: calc(var(--baseline) * 0.75);
   padding-bottom: calc(var(--baseline) * 0.25);
@@ -1687,7 +1685,6 @@ h3, .h3, h4, .h4 {
 
 h4, .h4 {
   font-weight: 400;
-  letter-spacing: -0.012em;
   font-size: var(--h4-size);
 }
 
@@ -1723,7 +1720,6 @@ h4+h2.single-line {
 
 h5, h6, .h5, .h6 {
   font-weight: 670;
-  letter-spacing: -0.015em;
   margin-bottom: 0;
 }
 
