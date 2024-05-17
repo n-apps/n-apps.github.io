@@ -9,18 +9,17 @@ Variables
   It's either constant or viewport-relative. Choose one.
 
   Constant: */
-  /* --fontSize: 12px; */
-  /*
+  --fontSize: 12px; 
 
-  Veiwport-relative (100% / EMs-across-viewport) */
-  --fontSize: calc(100vw / 90);
+ /* Veiwport-relative (100% / EMs-across-viewport) 
+  --fontSize: calc(100vw / 80); */
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   :root {
     --fontSize: calc(100vw / 30);
   }
-}
+} */
 
 :root {
   --sansFont: ui-sans-serif, system-ui, sans-serif, var(--emoji);
