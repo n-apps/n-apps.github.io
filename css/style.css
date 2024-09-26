@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Onest:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@300..700&display=swap');
 
 /*
 
@@ -11,7 +11,7 @@ Variables
   It's either constant or viewport-relative. Choose one.
 
   Constant: */
-  --fontSize: 12px; 
+  --fontSize: 14px; 
 
  /* Veiwport-relative (100% / EMs-across-viewport) 
   --fontSize: calc(100vw / 80); */
@@ -25,7 +25,7 @@ Variables
 
 :root {
   --sansFont: "Onest", ui-sans-serif, system-ui, sans-serif;
-  --displayFont:"Freeman", ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --displayFont:"SUSE", ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
   /* line height is the basis for vertical spacing */
   --lineHeight: calc(var(--fontSize) * 1.5);
   /* horizontal and vertical spacing basis */
@@ -1634,7 +1634,7 @@ h {
 }
 
 h, h1, .h1 {
-  font-weight: 400;
+  font-weight: 700;
   font-family: var(--displayFont);
   font-size: var(--h1-size);
   line-height: calc(var(--lineHeight) * 2);
@@ -1656,7 +1656,7 @@ h1.single-line:first-child {
 }
 
 h2, .h2 {
-  font-weight: 400;
+  font-weight: 700;
   font-family: var(--displayFont);
   font-size: var(--h2-size);
   line-height: calc(var(--lineHeight) * 2);
