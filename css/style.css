@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..7000&display=swap');
 
 /*
 
@@ -24,7 +25,7 @@ Variables
 } */
 
 :root {
-  --sansFont: "Onest", ui-sans-serif, system-ui, sans-serif;
+  --sansFont:"Inter Tight", ui-sans-serif, system-ui, sans-serif;
   --displayFont:"SUSE", ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
   /* line height is the basis for vertical spacing */
   --lineHeight: calc(var(--fontSize) * 1.5);
@@ -47,12 +48,13 @@ Variables
   --displayScale: 1;
   --pixel: 1px;
   /* Colors */
-  --foreground-color-rgb: 0, 0, 0;
+  --foreground-color-rgb: 52, 52, 61;
   --foreground-color-a: 1;
   --foreground-color: rgba(var(--foreground-color-rgb), var(--foreground-color-a));
   --background-color: #ffffff;
-  --text-decoration-color: rgba(var(--foreground-color-rgb), 0.5);
-  --accent-color: #9C9CDD;
+  --accent-color: #FF4552;
+  --text-decoration-color:#FF4552;
+
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
@@ -1336,7 +1338,8 @@ html {
   font-size: var(--fontSize);
   font-weight: 400;
   font-style: normal;
-  font-optical-sizing: auto;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
   line-height: var(--lineHeight);
   background: var(--background-color);
   color: var(--foreground-color);
@@ -1800,8 +1803,8 @@ h1>a:hover, h2>a:hover, h3>a:hover, h4>a:hover,
 h5>a:hover, h6>a:hover, .h1>a:hover, .h2>a:hover, .h3>a:hover,
 .h4>a:hover, .h5>a:hover, .h6>a:hover {
   text-decoration: underline;
-  -webkit-text-decoration: underline rgba(0, 0, 0, 0.3);
-  text-decoration: underline rgba(0, 0, 0, 0.3);
+  -webkit-text-decoration: underline  var(--text-decoration-color);
+  text-decoration: underline  var(--text-decoration-color);
   color: inherit;
 }
 
