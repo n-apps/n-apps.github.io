@@ -2691,21 +2691,6 @@ img.right.bottom {
   background-color: var(--yellow);
 }
 
-.portfolio-item:hover {
-  transform: scale(1.045);
-  transition: all 0.5s ease-in-out;
-}
-
-.my-avatar img {
-  transform: rotate(1deg);
-}
-
-.my-avatar img:hover {
-  transform: scale(1) rotate(0deg);
-  transition: all 0.5s ease;
-  filter: grayscale();
-}
-
 footer a {
   font-size: var(--h2-size);
 }
