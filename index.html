@@ -234,8 +234,8 @@
 
     <r-cell span="row">
       <footer id="footer">
+        <p id="visitor-counter" class="center opacity6"></p>
         <p class="center padding2 opacity4">Last updated: March, 2025 | © 2025</p>
-        <p id="visitor-counter" class="center padding2 opacity4"></p>
       </footer>
     </r-cell>
   </r-grid>
@@ -255,12 +255,7 @@
     clearInterval(t)
     window.goatcounter.visit_count({
       append: '#visitor-counter',
-      no_branding: true,
-      style: `
-    div { border-color: transparent; color: #34343d; border-radius: 0px; }
-    #gcvc-views { font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
-    #gcvc-for { color: #34343d; }
-  `
+      no_branding: true
     });
   }
 }, 100)
