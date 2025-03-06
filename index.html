@@ -235,6 +235,7 @@
     <r-cell span="row">
       <footer id="footer">
         <p class="center padding2 opacity4">Last updated: March, 2025 | © 2025</p>
+        <p id="visitor-counter" class="center padding2 opacity4"></p>
       </footer>
     </r-cell>
   </r-grid>
@@ -249,20 +250,30 @@
     })
   </script>
   <script>
-    var t = setInterval(function () {
-      if (window.goatcounter && window.goatcounter.visit_count) {
-        clearInterval(t)
-        window.goatcounter.visit_count({
-          append: '#footer',
-          no_branding: true,
-          style: `
-			  div { border-color: transparent; background-color: #141414; color: #888888; border-radius: 0px; }
-			  #gcvc-views { font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
-			  #gcvc-for { color: #888888; }
-			`
-        });
-      }
-    }, 100)
+     var counterEl = document.querySelector("#visitor-counter");
+        var t = setInterval(function () {
+            if (window.goatcounter && window.goatcounter.visit_count) {
+                clearInterval(t);
+                try {
+                    window.goatcounter.visit_count({
+                        append: "#visitor-counter",
+                        type: "svg",
+                        no_branding: true,
+                        path: window.location.pathname.replace(/\/$/, ""),
+                        style: `
+                            #gcvc-border { fill: transparent; stroke: #000; }
+                            #gcvc-for { fill: #000; font-size: 14px; }
+                            #gcvc-views { fill: #000; font-size: 16px; font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
+                            #gcvc-by { fill: #000; font-size: 12px; }
+                        `,
+                    });
+                } catch (err) {
+                    counterEl.innerHTML = 
+                        '<span class="fallback-message">No views yet</span>';
+                    console.error("Error loading GoatCounter stats:", err);
+                }
+            }
+        }, 100);
   </script>
   <script data-goatcounter="https://n-apps.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
