@@ -255,12 +255,12 @@
     clearInterval(t)
     window.goatcounter.visit_count({
       append: "#visitor-counter",
-      type: "svg",
       no_branding: true,
       style: `
-                            #gcvc-border { fill: transparent; stroke: #000; }
-                            #gcvc-for { fill: #000; font-size: 10px; }
-                            #gcvc-views { fill: #000; font-size: 12px; font-family:monospace }
+      			  div { border-color: transparent; color: #FF4552; border-radius: 0px; }
+                            #gcvc-border { fill: transparent; border-color: transparent; }
+                            #gcvc-for { fill: #000; font-size: 10px; display:none }
+                            #gcvc-views { fill: #FF4552; font-size: 14px; font-family:monospace }
                             #gcvc-by { fill: #000; font-size: 12px; }
                         `,
     });
