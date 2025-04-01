@@ -234,8 +234,7 @@
 
     <r-cell span="row">
       <footer id="footer">
-        <p id="visitor-counter" class="center opacity6"></p>
-        <p class="center padding2 opacity4">Last updated: March, 2025 | © 2025</p>
+        <p class="center padding2 opacity4">Last updated: April, 2025 | © 2025</p>
       </footer>
     </r-cell>
   </r-grid>
@@ -249,26 +248,8 @@
       }
     })
   </script>
-  <script>
-    var t = setInterval(function () {
-      if (window.goatcounter && window.goatcounter.visit_count) {
-        clearInterval(t)
-        window.goatcounter.visit_count({
-          append: "#visitor-counter",
-          no_branding: true,
-          style: `
-      			     body { background-color: transparent;}
-                        div { border:none;color: #FF4552;line-height:1;}
-                        #gcvc-border { fill: transparent; border-color: transparent; }
-                        #gcvc-for { fill: #000; font-size: 10px; display:none }
-                        #gcvc-views { fill: #FF4552; font-size: 14px; font-family:monospace }
-                        #gcvc-by { fill: #000; font-size: 12px; }
-                          `,
-        });
-      }
-    }, 100)
-  </script>
-  <script data-goatcounter="https://n-apps.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://n-apps.goatcounter.com/count"
+  async src="//gc.zgo.at/count.js"></script>
 </body>
 
 </html>
