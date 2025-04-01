@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*
 
@@ -12,7 +11,7 @@ Variables
   It's either constant or viewport-relative. Choose one.
 
   Constant: */
-  --fontSize: 14px; 
+  --fontSize: 13px; 
 
  /* Veiwport-relative (100% / EMs-across-viewport) 
   --fontSize: calc(100vw / 80); */
@@ -26,7 +25,7 @@ Variables
 
 :root {
   --sansFont:"Inter Tight", ui-sans-serif, system-ui, sans-serif;
-  --displayFont:"SUSE", ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --displayFont:"Boldonse", ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
   /* line height is the basis for vertical spacing */
   --lineHeight: calc(var(--fontSize) * 1.5);
   /* horizontal and vertical spacing basis */
@@ -1640,7 +1639,7 @@ h, h1, .h1 {
   font-weight: 700;
   font-family: var(--displayFont);
   font-size: var(--h1-size);
-  line-height: calc(var(--lineHeight) * 2);
+  line-height: calc(var(--lineHeight) * 2.5);
   margin-left: calc(var(--h1-size) / -22);
   margin-top: calc(var(--lineHeight) * 2);
   margin-bottom: var(--lineHeight);
