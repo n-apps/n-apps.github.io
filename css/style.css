@@ -1553,7 +1553,7 @@ hr:last-child {
 
 hr, hr:only-child {
   border: none;
-  background: var(--foreground-color);
+  background: rgba(var(--foreground-color-rgb), 0.2);
   height: var(--hrThickness);
   margin-top: calc(var(--lineHeight) - calc(var(--hrThickness) / 2));
   margin-bottom: calc(var(--lineHeight) - calc(var(--hrThickness) / 2));
@@ -2654,50 +2654,6 @@ img.right.bottom {
   opacity: 1;
 }
 
-/* colors */
-:root {
-  --red: rgb(238, 39, 17);
-  --blue: rgb(24, 113, 233);
-  --green: rgb(18, 192, 91);
-  --yellow: rgba(254, 220, 109);
-  --torn: rgba(156, 156, 221)
-}
-
-.red {
-  color: var(--red);
-}
-
-.bg-red {
-  background-color: var(--red);
-}
-
-.blue {
-  color: var(--blue);
-}
-
-.bg-blue {
-  background-color: var(--blue);
-}
-
-.green {
-  color: var(--green);
-}
-
-.bg-green {
-  background-color: var(--green);
-}
-
-.yellow {
-  color: var(--yellow);
-}
-
-.bg-yellow {
-  background-color: var(--yellow);
-}
-
-footer a {
-  font-size: var(--h2-size);
-}
 
 @media only screen and (max-width: 600px) {
   .section-title {
