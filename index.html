@@ -45,11 +45,13 @@
 <body>
   <r-grid columns="8">
     <r-cell span="1-1" span-s="row">
-      <h4 class="section-title opacity5">hi there!</h4>
+      <h4 class="opacity5">hi there!</h4>
     </r-cell>
 
     <r-cell span="2-4" span-s="row">
-      <br>
+        <div class="typewriter">
+           <h3> <em id="text"></em></h3>
+        </div>
       <br>
       <h1>I'm Roma, a product designer with 5+ years of experience</h1>
       <h3>I help companies build and ship products that provide value. I have a diverse range of experience and proven track record of designing intuitive UX for web and mobile platforms and launching successful apps with over 600K installs.</h3>
@@ -213,6 +215,65 @@
       </footer>
     </r-cell>
   </r-grid>
+  <script>
+    const phrases = ["Ship fast.", "Iterate.", "Repeat."];
+    const textElement = document.getElementById('text');
+    let currentPhraseIndex = 0;
+    
+    // Typewriter effect function
+    function typeWriter(text, index, callback) {
+        // If we've reached the end of the phrase
+        if (index <= text.length) {
+            textElement.textContent = text.substring(0, index);
+            setTimeout(() => {
+                typeWriter(text, index + 1, callback);
+            }, 100); // Speed of typing
+        } else {
+            // Delay before starting to delete
+            setTimeout(callback, 2000);
+        }
+    }
+    
+     // Deleting effect function with randomized timing
+     function deleteText(callback) {
+            const text = textElement.textContent;
+            
+            if (text.length > 0) {
+                textElement.textContent = text.substring(0, text.length - 1);
+                
+                // Random delay between 30ms and 80ms for more natural deletion
+                const randomDelay = Math.floor(Math.random() * 50) + 30;
+                
+                // Occasionally add a longer pause (10% chance)
+                const extraDelay = Math.random() < 0.1 ? Math.random() * 200 : 0;
+                
+                setTimeout(() => {
+                    deleteText(callback);
+                }, randomDelay + extraDelay);
+            } else {
+                callback();
+            }
+        }
+    
+    // Animation loop
+    function startTypingAnimation() {
+        const currentPhrase = phrases[currentPhraseIndex];
+        
+        // Type the current phrase
+        typeWriter(currentPhrase, 0, () => {
+            // Once typing is done, delete after a delay
+            deleteText(() => {
+                // After deleting, move to next phrase
+                currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+                // Continue the loop
+                startTypingAnimation();
+            });
+        });
+    }
+    
+    // Start the animation
+    window.addEventListener('load', startTypingAnimation);
+</script>
   <script>
     Array.prototype.forEach.call(document.getElementsByTagName('a'), function (link) {
       if (!link.href.startsWith('/') &&

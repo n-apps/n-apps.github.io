@@ -2654,6 +2654,29 @@ img.right.bottom {
   opacity: 1;
 }
 
+.typewriter {
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.typewriter em {
+  font-style: italic;
+  color: var(--foreground-color);
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  border-right: 1px solid var(--accent-color); /* Cursor */
+  animation: blink-cursor 1.2s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--accent-color); }
+}
+
 
 @media only screen and (max-width: 600px) {
   .section-title {
