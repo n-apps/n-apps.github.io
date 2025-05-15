@@ -11,7 +11,7 @@ Variables
   It's either constant or viewport-relative. Choose one.
 
   Constant: */
-  --fontSize: 13px; 
+  --fontSize: 14px; 
 
  /* Veiwport-relative (100% / EMs-across-viewport) 
   --fontSize: calc(100vw / 80); */
