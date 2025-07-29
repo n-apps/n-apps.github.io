@@ -2069,7 +2069,8 @@ h1.xxxlarge,
 a {
   text-decoration: underline;
   text-decoration-color: var(--text-decoration-color);
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1.5px;
+  text-decoration-line: underline;
   -webkit-text-decoration-line: underline;
   -webkit-text-decoration-color: var(--text-decoration-color);
   white-space: nowrap;
@@ -2077,10 +2078,8 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
   text-decoration-color: var(--accent-color);
-  text-decoration-thickness: 4px;
-  -webkit-text-decoration-line: underline;
+  text-decoration-thickness: 3px;
   -webkit-text-decoration-color: var(--accent-color);
 }
 
@@ -2112,9 +2111,11 @@ h6>a:hover,
 .h5>a:hover,
 .h6>a:hover {
   text-decoration: underline;
-  -webkit-text-decoration: underline var(--accent-color);
-  text-decoration: underline var(--accent-color);
-  text-decoration-thickness: 4px;
+  text-decoration-color: var(--accent-color);
+  text-decoration-thickness: 3px;
+  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-color: var(--accent-color);  white-space: nowrap;
   color: inherit;
 }
 
