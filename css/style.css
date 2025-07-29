@@ -3,12 +3,17 @@
 @font-face {
   font-family: 'Zalando Sans';
   src: url('ZalandoSans[wdth,wght,slnt].woff2') format('woff2'),
-       url('ZalandoSans[wdth,wght,slnt].ttf') format('truetype');
-  font-weight: 450; /* Variable weight range */
-  font-stretch: 120%; /* Variable width range */
-  font-style:  oblique 5deg; /* Variable slant range */
-  font-display: swap; /* Improves loading performance */
+    url('ZalandoSans[wdth,wght,slnt].ttf') format('truetype');
+  font-weight: 450;
+  /* Variable weight range */
+  font-stretch: 120%;
+  /* Variable width range */
+  font-style: oblique 5deg;
+  /* Variable slant range */
+  font-display: swap;
+  /* Improves loading performance */
 }
+
 /*
 
 Variables
@@ -20,9 +25,9 @@ Variables
   It's either constant or viewport-relative. Choose one.
 
   Constant: */
-  --fontSize: 14px; 
+  --fontSize: 14px;
 
- /* Veiwport-relative (100% / EMs-across-viewport) 
+  /* Veiwport-relative (100% / EMs-across-viewport) 
   --fontSize: calc(100vw / 80); */
 }
 
@@ -33,8 +38,8 @@ Variables
 } */
 
 :root {
-  --sansFont:'Inter Tight', ui-sans-serif, system-ui, sans-serif;
-  --displayFont:'Zalando Sans', ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --sansFont: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+  --displayFont: 'Zalando Sans', ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
   /* line height is the basis for vertical spacing */
   --lineHeight: calc(var(--fontSize) * 1.5);
   /* horizontal and vertical spacing basis */
@@ -61,25 +66,31 @@ Variables
   --foreground-color: rgba(var(--foreground-color-rgb), var(--foreground-color-a));
   --background-color: #ffffff;
   --accent-color: #FF4552;
-  --text-decoration-color:#d6d3d1;
+  --text-decoration-color: #d6d3d1;
 
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
   :root {
     --displayScale: 2;
     --pixel: 0.5px;
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (min-resolution: 2.5dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+only screen and (min-device-pixel-ratio: 2.5),
+only screen and (min-resolution: 2.5dppx) {
   :root {
     --displayScale: 3;
     --pixel: 0.34px;
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 3.5), only screen and (min-device-pixel-ratio: 3.5), only screen and (min-resolution: 3.5dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 3.5),
+only screen and (min-device-pixel-ratio: 3.5),
+only screen and (min-resolution: 3.5dppx) {
   :root {
     --displayScale: 4;
     --pixel: 0.25px;
@@ -103,7 +114,9 @@ Variables
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -111,7 +124,8 @@ Variables
   margin: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -120,16 +134,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -394,123 +421,182 @@ r-grid>r-cell[span^="30"] {
 }
 
 /* span=...+width, span=...-end */
-r-grid>r-cell[span$="+1"], r-grid>r-cell[span="1"] {
+r-grid>r-cell[span$="+1"],
+r-grid>r-cell[span="1"] {
   --grid-ce: 1
 }
 
-r-grid>r-cell[span$="+2"], r-grid>r-cell[span$="-1"], r-grid>r-cell[span="2"] {
+r-grid>r-cell[span$="+2"],
+r-grid>r-cell[span$="-1"],
+r-grid>r-cell[span="2"] {
   --grid-ce: 2
 }
 
-r-grid>r-cell[span$="+3"], r-grid>r-cell[span$="-2"], r-grid>r-cell[span="3"] {
+r-grid>r-cell[span$="+3"],
+r-grid>r-cell[span$="-2"],
+r-grid>r-cell[span="3"] {
   --grid-ce: 3
 }
 
-r-grid>r-cell[span$="+4"], r-grid>r-cell[span$="-3"], r-grid>r-cell[span="4"] {
+r-grid>r-cell[span$="+4"],
+r-grid>r-cell[span$="-3"],
+r-grid>r-cell[span="4"] {
   --grid-ce: 4
 }
 
-r-grid>r-cell[span$="+5"], r-grid>r-cell[span$="-4"], r-grid>r-cell[span="5"] {
+r-grid>r-cell[span$="+5"],
+r-grid>r-cell[span$="-4"],
+r-grid>r-cell[span="5"] {
   --grid-ce: 5
 }
 
-r-grid>r-cell[span$="+6"], r-grid>r-cell[span$="-5"], r-grid>r-cell[span="6"] {
+r-grid>r-cell[span$="+6"],
+r-grid>r-cell[span$="-5"],
+r-grid>r-cell[span="6"] {
   --grid-ce: 6
 }
 
-r-grid>r-cell[span$="+7"], r-grid>r-cell[span$="-6"], r-grid>r-cell[span="7"] {
+r-grid>r-cell[span$="+7"],
+r-grid>r-cell[span$="-6"],
+r-grid>r-cell[span="7"] {
   --grid-ce: 7
 }
 
-r-grid>r-cell[span$="+8"], r-grid>r-cell[span$="-7"], r-grid>r-cell[span="8"] {
+r-grid>r-cell[span$="+8"],
+r-grid>r-cell[span$="-7"],
+r-grid>r-cell[span="8"] {
   --grid-ce: 8
 }
 
-r-grid>r-cell[span$="+9"], r-grid>r-cell[span$="-8"], r-grid>r-cell[span="9"] {
+r-grid>r-cell[span$="+9"],
+r-grid>r-cell[span$="-8"],
+r-grid>r-cell[span="9"] {
   --grid-ce: 9
 }
 
-r-grid>r-cell[span$="+10"], r-grid>r-cell[span$="-9"], r-grid>r-cell[span="10"] {
+r-grid>r-cell[span$="+10"],
+r-grid>r-cell[span$="-9"],
+r-grid>r-cell[span="10"] {
   --grid-ce: 10
 }
 
-r-grid>r-cell[span$="+11"], r-grid>r-cell[span$="-10"], r-grid>r-cell[span="11"] {
+r-grid>r-cell[span$="+11"],
+r-grid>r-cell[span$="-10"],
+r-grid>r-cell[span="11"] {
   --grid-ce: 11
 }
 
-r-grid>r-cell[span$="+12"], r-grid>r-cell[span$="-11"], r-grid>r-cell[span="12"] {
+r-grid>r-cell[span$="+12"],
+r-grid>r-cell[span$="-11"],
+r-grid>r-cell[span="12"] {
   --grid-ce: 12
 }
 
-r-grid>r-cell[span$="+13"], r-grid>r-cell[span$="-12"], r-grid>r-cell[span="13"] {
+r-grid>r-cell[span$="+13"],
+r-grid>r-cell[span$="-12"],
+r-grid>r-cell[span="13"] {
   --grid-ce: 13
 }
 
-r-grid>r-cell[span$="+14"], r-grid>r-cell[span$="-13"], r-grid>r-cell[span="14"] {
+r-grid>r-cell[span$="+14"],
+r-grid>r-cell[span$="-13"],
+r-grid>r-cell[span="14"] {
   --grid-ce: 14
 }
 
-r-grid>r-cell[span$="+15"], r-grid>r-cell[span$="-14"], r-grid>r-cell[span="15"] {
+r-grid>r-cell[span$="+15"],
+r-grid>r-cell[span$="-14"],
+r-grid>r-cell[span="15"] {
   --grid-ce: 15
 }
 
-r-grid>r-cell[span$="+16"], r-grid>r-cell[span$="-15"], r-grid>r-cell[span="16"] {
+r-grid>r-cell[span$="+16"],
+r-grid>r-cell[span$="-15"],
+r-grid>r-cell[span="16"] {
   --grid-ce: 16
 }
 
-r-grid>r-cell[span$="+17"], r-grid>r-cell[span$="-16"], r-grid>r-cell[span="17"] {
+r-grid>r-cell[span$="+17"],
+r-grid>r-cell[span$="-16"],
+r-grid>r-cell[span="17"] {
   --grid-ce: 17
 }
 
-r-grid>r-cell[span$="+18"], r-grid>r-cell[span$="-17"], r-grid>r-cell[span="18"] {
+r-grid>r-cell[span$="+18"],
+r-grid>r-cell[span$="-17"],
+r-grid>r-cell[span="18"] {
   --grid-ce: 18
 }
 
-r-grid>r-cell[span$="+19"], r-grid>r-cell[span$="-18"], r-grid>r-cell[span="19"] {
+r-grid>r-cell[span$="+19"],
+r-grid>r-cell[span$="-18"],
+r-grid>r-cell[span="19"] {
   --grid-ce: 19
 }
 
-r-grid>r-cell[span$="+20"], r-grid>r-cell[span$="-19"], r-grid>r-cell[span="20"] {
+r-grid>r-cell[span$="+20"],
+r-grid>r-cell[span$="-19"],
+r-grid>r-cell[span="20"] {
   --grid-ce: 20
 }
 
-r-grid>r-cell[span$="+21"], r-grid>r-cell[span$="-20"], r-grid>r-cell[span="21"] {
+r-grid>r-cell[span$="+21"],
+r-grid>r-cell[span$="-20"],
+r-grid>r-cell[span="21"] {
   --grid-ce: 21
 }
 
-r-grid>r-cell[span$="+22"], r-grid>r-cell[span$="-21"], r-grid>r-cell[span="22"] {
+r-grid>r-cell[span$="+22"],
+r-grid>r-cell[span$="-21"],
+r-grid>r-cell[span="22"] {
   --grid-ce: 22
 }
 
-r-grid>r-cell[span$="+23"], r-grid>r-cell[span$="-22"], r-grid>r-cell[span="23"] {
+r-grid>r-cell[span$="+23"],
+r-grid>r-cell[span$="-22"],
+r-grid>r-cell[span="23"] {
   --grid-ce: 23
 }
 
-r-grid>r-cell[span$="+24"], r-grid>r-cell[span$="-23"], r-grid>r-cell[span="24"] {
+r-grid>r-cell[span$="+24"],
+r-grid>r-cell[span$="-23"],
+r-grid>r-cell[span="24"] {
   --grid-ce: 24
 }
 
-r-grid>r-cell[span$="+25"], r-grid>r-cell[span$="-24"], r-grid>r-cell[span="25"] {
+r-grid>r-cell[span$="+25"],
+r-grid>r-cell[span$="-24"],
+r-grid>r-cell[span="25"] {
   --grid-ce: 25
 }
 
-r-grid>r-cell[span$="+26"], r-grid>r-cell[span$="-25"], r-grid>r-cell[span="26"] {
+r-grid>r-cell[span$="+26"],
+r-grid>r-cell[span$="-25"],
+r-grid>r-cell[span="26"] {
   --grid-ce: 26
 }
 
-r-grid>r-cell[span$="+27"], r-grid>r-cell[span$="-26"], r-grid>r-cell[span="27"] {
+r-grid>r-cell[span$="+27"],
+r-grid>r-cell[span$="-26"],
+r-grid>r-cell[span="27"] {
   --grid-ce: 27
 }
 
-r-grid>r-cell[span$="+28"], r-grid>r-cell[span$="-27"], r-grid>r-cell[span="28"] {
+r-grid>r-cell[span$="+28"],
+r-grid>r-cell[span$="-27"],
+r-grid>r-cell[span="28"] {
   --grid-ce: 28
 }
 
-r-grid>r-cell[span$="+29"], r-grid>r-cell[span$="-28"], r-grid>r-cell[span="29"] {
+r-grid>r-cell[span$="+29"],
+r-grid>r-cell[span$="-28"],
+r-grid>r-cell[span="29"] {
   --grid-ce: 29
 }
 
-r-grid>r-cell[span$="+30"], r-grid>r-cell[span$="-29"], r-grid>r-cell[span="30"] {
+r-grid>r-cell[span$="+30"],
+r-grid>r-cell[span$="-29"],
+r-grid>r-cell[span="30"] {
   --grid-ce: 30
 }
 
@@ -523,11 +609,14 @@ r-grid>r-cell[span] {
   grid-column-end: span var(--grid-ce)
 }
 
-r-grid>r-cell[span*="+"], r-grid>r-cell[span*="-"], r-grid>r-cell[span*=".."] {
+r-grid>r-cell[span*="+"],
+r-grid>r-cell[span*="-"],
+r-grid>r-cell[span*=".."] {
   grid-column-start: var(--grid-cs)
 }
 
-r-grid>r-cell[span*="-"], r-grid>r-cell[span*=".."] {
+r-grid>r-cell[span*="-"],
+r-grid>r-cell[span*=".."] {
   grid-column-end: var(--grid-ce)
 }
 
@@ -779,123 +868,182 @@ r-grid>r-cell[span="row"] {
   }
 
   /* span-s=...+width, span-s=...-end */
-  r-grid>r-cell[span-s$="+1"], r-grid>r-cell[span-s="1"] {
+  r-grid>r-cell[span-s$="+1"],
+  r-grid>r-cell[span-s="1"] {
     --grid-ce: 1
   }
 
-  r-grid>r-cell[span-s$="+2"], r-grid>r-cell[span-s$="-1"], r-grid>r-cell[span-s="2"] {
+  r-grid>r-cell[span-s$="+2"],
+  r-grid>r-cell[span-s$="-1"],
+  r-grid>r-cell[span-s="2"] {
     --grid-ce: 2
   }
 
-  r-grid>r-cell[span-s$="+3"], r-grid>r-cell[span-s$="-2"], r-grid>r-cell[span-s="3"] {
+  r-grid>r-cell[span-s$="+3"],
+  r-grid>r-cell[span-s$="-2"],
+  r-grid>r-cell[span-s="3"] {
     --grid-ce: 3
   }
 
-  r-grid>r-cell[span-s$="+4"], r-grid>r-cell[span-s$="-3"], r-grid>r-cell[span-s="4"] {
+  r-grid>r-cell[span-s$="+4"],
+  r-grid>r-cell[span-s$="-3"],
+  r-grid>r-cell[span-s="4"] {
     --grid-ce: 4
   }
 
-  r-grid>r-cell[span-s$="+5"], r-grid>r-cell[span-s$="-4"], r-grid>r-cell[span-s="5"] {
+  r-grid>r-cell[span-s$="+5"],
+  r-grid>r-cell[span-s$="-4"],
+  r-grid>r-cell[span-s="5"] {
     --grid-ce: 5
   }
 
-  r-grid>r-cell[span-s$="+6"], r-grid>r-cell[span-s$="-5"], r-grid>r-cell[span-s="6"] {
+  r-grid>r-cell[span-s$="+6"],
+  r-grid>r-cell[span-s$="-5"],
+  r-grid>r-cell[span-s="6"] {
     --grid-ce: 6
   }
 
-  r-grid>r-cell[span-s$="+7"], r-grid>r-cell[span-s$="-6"], r-grid>r-cell[span-s="7"] {
+  r-grid>r-cell[span-s$="+7"],
+  r-grid>r-cell[span-s$="-6"],
+  r-grid>r-cell[span-s="7"] {
     --grid-ce: 7
   }
 
-  r-grid>r-cell[span-s$="+8"], r-grid>r-cell[span-s$="-7"], r-grid>r-cell[span-s="8"] {
+  r-grid>r-cell[span-s$="+8"],
+  r-grid>r-cell[span-s$="-7"],
+  r-grid>r-cell[span-s="8"] {
     --grid-ce: 8
   }
 
-  r-grid>r-cell[span-s$="+9"], r-grid>r-cell[span-s$="-8"], r-grid>r-cell[span-s="9"] {
+  r-grid>r-cell[span-s$="+9"],
+  r-grid>r-cell[span-s$="-8"],
+  r-grid>r-cell[span-s="9"] {
     --grid-ce: 9
   }
 
-  r-grid>r-cell[span-s$="+10"], r-grid>r-cell[span-s$="-9"], r-grid>r-cell[span-s="10"] {
+  r-grid>r-cell[span-s$="+10"],
+  r-grid>r-cell[span-s$="-9"],
+  r-grid>r-cell[span-s="10"] {
     --grid-ce: 10
   }
 
-  r-grid>r-cell[span-s$="+11"], r-grid>r-cell[span-s$="-10"], r-grid>r-cell[span-s="11"] {
+  r-grid>r-cell[span-s$="+11"],
+  r-grid>r-cell[span-s$="-10"],
+  r-grid>r-cell[span-s="11"] {
     --grid-ce: 11
   }
 
-  r-grid>r-cell[span-s$="+12"], r-grid>r-cell[span-s$="-11"], r-grid>r-cell[span-s="12"] {
+  r-grid>r-cell[span-s$="+12"],
+  r-grid>r-cell[span-s$="-11"],
+  r-grid>r-cell[span-s="12"] {
     --grid-ce: 12
   }
 
-  r-grid>r-cell[span-s$="+13"], r-grid>r-cell[span-s$="-12"], r-grid>r-cell[span-s="13"] {
+  r-grid>r-cell[span-s$="+13"],
+  r-grid>r-cell[span-s$="-12"],
+  r-grid>r-cell[span-s="13"] {
     --grid-ce: 13
   }
 
-  r-grid>r-cell[span-s$="+14"], r-grid>r-cell[span-s$="-13"], r-grid>r-cell[span-s="14"] {
+  r-grid>r-cell[span-s$="+14"],
+  r-grid>r-cell[span-s$="-13"],
+  r-grid>r-cell[span-s="14"] {
     --grid-ce: 14
   }
 
-  r-grid>r-cell[span-s$="+15"], r-grid>r-cell[span-s$="-14"], r-grid>r-cell[span-s="15"] {
+  r-grid>r-cell[span-s$="+15"],
+  r-grid>r-cell[span-s$="-14"],
+  r-grid>r-cell[span-s="15"] {
     --grid-ce: 15
   }
 
-  r-grid>r-cell[span-s$="+16"], r-grid>r-cell[span-s$="-15"], r-grid>r-cell[span-s="16"] {
+  r-grid>r-cell[span-s$="+16"],
+  r-grid>r-cell[span-s$="-15"],
+  r-grid>r-cell[span-s="16"] {
     --grid-ce: 16
   }
 
-  r-grid>r-cell[span-s$="+17"], r-grid>r-cell[span-s$="-16"], r-grid>r-cell[span-s="17"] {
+  r-grid>r-cell[span-s$="+17"],
+  r-grid>r-cell[span-s$="-16"],
+  r-grid>r-cell[span-s="17"] {
     --grid-ce: 17
   }
 
-  r-grid>r-cell[span-s$="+18"], r-grid>r-cell[span-s$="-17"], r-grid>r-cell[span-s="18"] {
+  r-grid>r-cell[span-s$="+18"],
+  r-grid>r-cell[span-s$="-17"],
+  r-grid>r-cell[span-s="18"] {
     --grid-ce: 18
   }
 
-  r-grid>r-cell[span-s$="+19"], r-grid>r-cell[span-s$="-18"], r-grid>r-cell[span-s="19"] {
+  r-grid>r-cell[span-s$="+19"],
+  r-grid>r-cell[span-s$="-18"],
+  r-grid>r-cell[span-s="19"] {
     --grid-ce: 19
   }
 
-  r-grid>r-cell[span-s$="+20"], r-grid>r-cell[span-s$="-19"], r-grid>r-cell[span-s="20"] {
+  r-grid>r-cell[span-s$="+20"],
+  r-grid>r-cell[span-s$="-19"],
+  r-grid>r-cell[span-s="20"] {
     --grid-ce: 20
   }
 
-  r-grid>r-cell[span-s$="+21"], r-grid>r-cell[span-s$="-20"], r-grid>r-cell[span-s="21"] {
+  r-grid>r-cell[span-s$="+21"],
+  r-grid>r-cell[span-s$="-20"],
+  r-grid>r-cell[span-s="21"] {
     --grid-ce: 21
   }
 
-  r-grid>r-cell[span-s$="+22"], r-grid>r-cell[span-s$="-21"], r-grid>r-cell[span-s="22"] {
+  r-grid>r-cell[span-s$="+22"],
+  r-grid>r-cell[span-s$="-21"],
+  r-grid>r-cell[span-s="22"] {
     --grid-ce: 22
   }
 
-  r-grid>r-cell[span-s$="+23"], r-grid>r-cell[span-s$="-22"], r-grid>r-cell[span-s="23"] {
+  r-grid>r-cell[span-s$="+23"],
+  r-grid>r-cell[span-s$="-22"],
+  r-grid>r-cell[span-s="23"] {
     --grid-ce: 23
   }
 
-  r-grid>r-cell[span-s$="+24"], r-grid>r-cell[span-s$="-23"], r-grid>r-cell[span-s="24"] {
+  r-grid>r-cell[span-s$="+24"],
+  r-grid>r-cell[span-s$="-23"],
+  r-grid>r-cell[span-s="24"] {
     --grid-ce: 24
   }
 
-  r-grid>r-cell[span-s$="+25"], r-grid>r-cell[span-s$="-24"], r-grid>r-cell[span-s="25"] {
+  r-grid>r-cell[span-s$="+25"],
+  r-grid>r-cell[span-s$="-24"],
+  r-grid>r-cell[span-s="25"] {
     --grid-ce: 25
   }
 
-  r-grid>r-cell[span-s$="+26"], r-grid>r-cell[span-s$="-25"], r-grid>r-cell[span-s="26"] {
+  r-grid>r-cell[span-s$="+26"],
+  r-grid>r-cell[span-s$="-25"],
+  r-grid>r-cell[span-s="26"] {
     --grid-ce: 26
   }
 
-  r-grid>r-cell[span-s$="+27"], r-grid>r-cell[span-s$="-26"], r-grid>r-cell[span-s="27"] {
+  r-grid>r-cell[span-s$="+27"],
+  r-grid>r-cell[span-s$="-26"],
+  r-grid>r-cell[span-s="27"] {
     --grid-ce: 27
   }
 
-  r-grid>r-cell[span-s$="+28"], r-grid>r-cell[span-s$="-27"], r-grid>r-cell[span-s="28"] {
+  r-grid>r-cell[span-s$="+28"],
+  r-grid>r-cell[span-s$="-27"],
+  r-grid>r-cell[span-s="28"] {
     --grid-ce: 28
   }
 
-  r-grid>r-cell[span-s$="+29"], r-grid>r-cell[span-s$="-28"], r-grid>r-cell[span-s="29"] {
+  r-grid>r-cell[span-s$="+29"],
+  r-grid>r-cell[span-s$="-28"],
+  r-grid>r-cell[span-s="29"] {
     --grid-ce: 29
   }
 
-  r-grid>r-cell[span-s$="+30"], r-grid>r-cell[span-s$="-29"], r-grid>r-cell[span-s="30"] {
+  r-grid>r-cell[span-s$="+30"],
+  r-grid>r-cell[span-s$="-29"],
+  r-grid>r-cell[span-s="30"] {
     --grid-ce: 30
   }
 
@@ -908,11 +1056,14 @@ r-grid>r-cell[span="row"] {
     grid-column-end: span var(--grid-ce)
   }
 
-  r-grid>r-cell[span-s*="+"], r-grid>r-cell[span-s*="-"], r-grid>r-cell[span-s*=".."] {
+  r-grid>r-cell[span-s*="+"],
+  r-grid>r-cell[span-s*="-"],
+  r-grid>r-cell[span-s*=".."] {
     grid-column-start: var(--grid-cs)
   }
 
-  r-grid>r-cell[span-s*="-"], r-grid>r-cell[span-s*=".."] {
+  r-grid>r-cell[span-s*="-"],
+  r-grid>r-cell[span-s*=".."] {
     grid-column-end: var(--grid-ce)
   }
 
@@ -1165,123 +1316,182 @@ r-grid>r-cell[span="row"] {
   }
 
   /* span-l=...+width, span-l=...-end */
-  r-grid>r-cell[span-l$="+1"], r-grid>r-cell[span-l="1"] {
+  r-grid>r-cell[span-l$="+1"],
+  r-grid>r-cell[span-l="1"] {
     --grid-ce: 1
   }
 
-  r-grid>r-cell[span-l$="+2"], r-grid>r-cell[span-l$="-1"], r-grid>r-cell[span-l="2"] {
+  r-grid>r-cell[span-l$="+2"],
+  r-grid>r-cell[span-l$="-1"],
+  r-grid>r-cell[span-l="2"] {
     --grid-ce: 2
   }
 
-  r-grid>r-cell[span-l$="+3"], r-grid>r-cell[span-l$="-2"], r-grid>r-cell[span-l="3"] {
+  r-grid>r-cell[span-l$="+3"],
+  r-grid>r-cell[span-l$="-2"],
+  r-grid>r-cell[span-l="3"] {
     --grid-ce: 3
   }
 
-  r-grid>r-cell[span-l$="+4"], r-grid>r-cell[span-l$="-3"], r-grid>r-cell[span-l="4"] {
+  r-grid>r-cell[span-l$="+4"],
+  r-grid>r-cell[span-l$="-3"],
+  r-grid>r-cell[span-l="4"] {
     --grid-ce: 4
   }
 
-  r-grid>r-cell[span-l$="+5"], r-grid>r-cell[span-l$="-4"], r-grid>r-cell[span-l="5"] {
+  r-grid>r-cell[span-l$="+5"],
+  r-grid>r-cell[span-l$="-4"],
+  r-grid>r-cell[span-l="5"] {
     --grid-ce: 5
   }
 
-  r-grid>r-cell[span-l$="+6"], r-grid>r-cell[span-l$="-5"], r-grid>r-cell[span-l="6"] {
+  r-grid>r-cell[span-l$="+6"],
+  r-grid>r-cell[span-l$="-5"],
+  r-grid>r-cell[span-l="6"] {
     --grid-ce: 6
   }
 
-  r-grid>r-cell[span-l$="+7"], r-grid>r-cell[span-l$="-6"], r-grid>r-cell[span-l="7"] {
+  r-grid>r-cell[span-l$="+7"],
+  r-grid>r-cell[span-l$="-6"],
+  r-grid>r-cell[span-l="7"] {
     --grid-ce: 7
   }
 
-  r-grid>r-cell[span-l$="+8"], r-grid>r-cell[span-l$="-7"], r-grid>r-cell[span-l="8"] {
+  r-grid>r-cell[span-l$="+8"],
+  r-grid>r-cell[span-l$="-7"],
+  r-grid>r-cell[span-l="8"] {
     --grid-ce: 8
   }
 
-  r-grid>r-cell[span-l$="+9"], r-grid>r-cell[span-l$="-8"], r-grid>r-cell[span-l="9"] {
+  r-grid>r-cell[span-l$="+9"],
+  r-grid>r-cell[span-l$="-8"],
+  r-grid>r-cell[span-l="9"] {
     --grid-ce: 9
   }
 
-  r-grid>r-cell[span-l$="+10"], r-grid>r-cell[span-l$="-9"], r-grid>r-cell[span-l="10"] {
+  r-grid>r-cell[span-l$="+10"],
+  r-grid>r-cell[span-l$="-9"],
+  r-grid>r-cell[span-l="10"] {
     --grid-ce: 10
   }
 
-  r-grid>r-cell[span-l$="+11"], r-grid>r-cell[span-l$="-10"], r-grid>r-cell[span-l="11"] {
+  r-grid>r-cell[span-l$="+11"],
+  r-grid>r-cell[span-l$="-10"],
+  r-grid>r-cell[span-l="11"] {
     --grid-ce: 11
   }
 
-  r-grid>r-cell[span-l$="+12"], r-grid>r-cell[span-l$="-11"], r-grid>r-cell[span-l="12"] {
+  r-grid>r-cell[span-l$="+12"],
+  r-grid>r-cell[span-l$="-11"],
+  r-grid>r-cell[span-l="12"] {
     --grid-ce: 12
   }
 
-  r-grid>r-cell[span-l$="+13"], r-grid>r-cell[span-l$="-12"], r-grid>r-cell[span-l="13"] {
+  r-grid>r-cell[span-l$="+13"],
+  r-grid>r-cell[span-l$="-12"],
+  r-grid>r-cell[span-l="13"] {
     --grid-ce: 13
   }
 
-  r-grid>r-cell[span-l$="+14"], r-grid>r-cell[span-l$="-13"], r-grid>r-cell[span-l="14"] {
+  r-grid>r-cell[span-l$="+14"],
+  r-grid>r-cell[span-l$="-13"],
+  r-grid>r-cell[span-l="14"] {
     --grid-ce: 14
   }
 
-  r-grid>r-cell[span-l$="+15"], r-grid>r-cell[span-l$="-14"], r-grid>r-cell[span-l="15"] {
+  r-grid>r-cell[span-l$="+15"],
+  r-grid>r-cell[span-l$="-14"],
+  r-grid>r-cell[span-l="15"] {
     --grid-ce: 15
   }
 
-  r-grid>r-cell[span-l$="+16"], r-grid>r-cell[span-l$="-15"], r-grid>r-cell[span-l="16"] {
+  r-grid>r-cell[span-l$="+16"],
+  r-grid>r-cell[span-l$="-15"],
+  r-grid>r-cell[span-l="16"] {
     --grid-ce: 16
   }
 
-  r-grid>r-cell[span-l$="+17"], r-grid>r-cell[span-l$="-16"], r-grid>r-cell[span-l="17"] {
+  r-grid>r-cell[span-l$="+17"],
+  r-grid>r-cell[span-l$="-16"],
+  r-grid>r-cell[span-l="17"] {
     --grid-ce: 17
   }
 
-  r-grid>r-cell[span-l$="+18"], r-grid>r-cell[span-l$="-17"], r-grid>r-cell[span-l="18"] {
+  r-grid>r-cell[span-l$="+18"],
+  r-grid>r-cell[span-l$="-17"],
+  r-grid>r-cell[span-l="18"] {
     --grid-ce: 18
   }
 
-  r-grid>r-cell[span-l$="+19"], r-grid>r-cell[span-l$="-18"], r-grid>r-cell[span-l="19"] {
+  r-grid>r-cell[span-l$="+19"],
+  r-grid>r-cell[span-l$="-18"],
+  r-grid>r-cell[span-l="19"] {
     --grid-ce: 19
   }
 
-  r-grid>r-cell[span-l$="+20"], r-grid>r-cell[span-l$="-19"], r-grid>r-cell[span-l="20"] {
+  r-grid>r-cell[span-l$="+20"],
+  r-grid>r-cell[span-l$="-19"],
+  r-grid>r-cell[span-l="20"] {
     --grid-ce: 20
   }
 
-  r-grid>r-cell[span-l$="+21"], r-grid>r-cell[span-l$="-20"], r-grid>r-cell[span-l="21"] {
+  r-grid>r-cell[span-l$="+21"],
+  r-grid>r-cell[span-l$="-20"],
+  r-grid>r-cell[span-l="21"] {
     --grid-ce: 21
   }
 
-  r-grid>r-cell[span-l$="+22"], r-grid>r-cell[span-l$="-21"], r-grid>r-cell[span-l="22"] {
+  r-grid>r-cell[span-l$="+22"],
+  r-grid>r-cell[span-l$="-21"],
+  r-grid>r-cell[span-l="22"] {
     --grid-ce: 22
   }
 
-  r-grid>r-cell[span-l$="+23"], r-grid>r-cell[span-l$="-22"], r-grid>r-cell[span-l="23"] {
+  r-grid>r-cell[span-l$="+23"],
+  r-grid>r-cell[span-l$="-22"],
+  r-grid>r-cell[span-l="23"] {
     --grid-ce: 23
   }
 
-  r-grid>r-cell[span-l$="+24"], r-grid>r-cell[span-l$="-23"], r-grid>r-cell[span-l="24"] {
+  r-grid>r-cell[span-l$="+24"],
+  r-grid>r-cell[span-l$="-23"],
+  r-grid>r-cell[span-l="24"] {
     --grid-ce: 24
   }
 
-  r-grid>r-cell[span-l$="+25"], r-grid>r-cell[span-l$="-24"], r-grid>r-cell[span-l="25"] {
+  r-grid>r-cell[span-l$="+25"],
+  r-grid>r-cell[span-l$="-24"],
+  r-grid>r-cell[span-l="25"] {
     --grid-ce: 25
   }
 
-  r-grid>r-cell[span-l$="+26"], r-grid>r-cell[span-l$="-25"], r-grid>r-cell[span-l="26"] {
+  r-grid>r-cell[span-l$="+26"],
+  r-grid>r-cell[span-l$="-25"],
+  r-grid>r-cell[span-l="26"] {
     --grid-ce: 26
   }
 
-  r-grid>r-cell[span-l$="+27"], r-grid>r-cell[span-l$="-26"], r-grid>r-cell[span-l="27"] {
+  r-grid>r-cell[span-l$="+27"],
+  r-grid>r-cell[span-l$="-26"],
+  r-grid>r-cell[span-l="27"] {
     --grid-ce: 27
   }
 
-  r-grid>r-cell[span-l$="+28"], r-grid>r-cell[span-l$="-27"], r-grid>r-cell[span-l="28"] {
+  r-grid>r-cell[span-l$="+28"],
+  r-grid>r-cell[span-l$="-27"],
+  r-grid>r-cell[span-l="28"] {
     --grid-ce: 28
   }
 
-  r-grid>r-cell[span-l$="+29"], r-grid>r-cell[span-l$="-28"], r-grid>r-cell[span-l="29"] {
+  r-grid>r-cell[span-l$="+29"],
+  r-grid>r-cell[span-l$="-28"],
+  r-grid>r-cell[span-l="29"] {
     --grid-ce: 29
   }
 
-  r-grid>r-cell[span-l$="+30"], r-grid>r-cell[span-l$="-29"], r-grid>r-cell[span-l="30"] {
+  r-grid>r-cell[span-l$="+30"],
+  r-grid>r-cell[span-l$="-29"],
+  r-grid>r-cell[span-l="30"] {
     --grid-ce: 30
   }
 
@@ -1294,11 +1504,14 @@ r-grid>r-cell[span="row"] {
     grid-column-end: span var(--grid-ce)
   }
 
-  r-grid>r-cell[span-l*="+"], r-grid>r-cell[span-l*="-"], r-grid>r-cell[span-l*=".."] {
+  r-grid>r-cell[span-l*="+"],
+  r-grid>r-cell[span-l*="-"],
+  r-grid>r-cell[span-l*=".."] {
     grid-column-start: var(--grid-cs)
   }
 
-  r-grid>r-cell[span-l*="-"], r-grid>r-cell[span-l*=".."] {
+  r-grid>r-cell[span-l*="-"],
+  r-grid>r-cell[span-l*=".."] {
     grid-column-end: var(--grid-ce)
   }
 
@@ -1374,7 +1587,9 @@ body {
 }
 
 /* column flow */
-[flow-cols], [flow-cols-s], [flow-cols-l] {
+[flow-cols],
+[flow-cols-s],
+[flow-cols-l] {
   -webkit-column-gap: var(--columnGap);
   -moz-column-gap: var(--columnGap);
   column-gap: var(--columnGap);
@@ -1534,8 +1749,32 @@ body {
 }
 
 /* block */
-address, article, aside, blockquote, dd, dl, dt, fieldset, figure, form,
-r-grid, h1, h2, h3, h4, h5, h6, li, nav, ol, p, pre, table, tfoot, ul, video {
+address,
+article,
+aside,
+blockquote,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+form,
+r-grid,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+nav,
+ol,
+p,
+pre,
+table,
+tfoot,
+ul,
+video {
   margin-top: var(--blockSpacingTop);
   margin-bottom: var(--blockSpacingBottom);
 }
@@ -1560,7 +1799,8 @@ hr:last-child {
   margin-bottom: calc(var(--hrThickness) / -2);
 }
 
-hr, hr:only-child {
+hr,
+hr:only-child {
   border: none;
   background: rgba(var(--foreground-color-rgb), 0.2);
   height: var(--hrThickness);
@@ -1597,17 +1837,25 @@ r-grid > hr:not(:first-child):not(:last-child) + hr {
   display:none;
 }*/
 /* text style modifiers */
-b, strong, .bold {
+b,
+strong,
+.bold {
   font-weight: 600;
 }
 
-i, em, .italic {
+i,
+em,
+.italic {
   font-style: italic;
 }
 
 /* preformatted text */
-pre, code, tt, .code, .monospace {
-  font-family:  ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+pre,
+code,
+tt,
+.code,
+.monospace {
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
   font-weight: 430;
   word-wrap: break-word;
   white-space: pre-wrap;
@@ -1615,11 +1863,19 @@ pre, code, tt, .code, .monospace {
 
 /*pre { white-space: pre-wrap; }*/
 /*code { white-space: nowrap; }*/
-b pre, b code, b tt, b .code, b .monospace {
+b pre,
+b code,
+b tt,
+b .code,
+b .monospace {
   font-weight: 600;
 }
 
-pre b, code b, tt b, .code b, .monospace b {
+pre b,
+code b,
+tt b,
+.code b,
+.monospace b {
   font-weight: 600;
   font-weight: 580;
 }
@@ -1631,7 +1887,8 @@ pre {
   display: block;
 }
 
-pre code, pre tt {
+pre code,
+pre tt {
   white-space: pre;
   word-wrap: normal;
 }
@@ -1644,7 +1901,9 @@ h {
   -webkit-appearance: none
 }
 
-h, h1, .h1 {
+h,
+h1,
+.h1 {
   font-weight: 700;
   font-family: var(--displayFont);
   font-size: var(--h1-size);
@@ -1666,7 +1925,8 @@ h1.single-line:first-child {
   padding-bottom: calc(var(--lineHeight) * 0.5);
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-weight: 700;
   font-family: var(--displayFont);
   font-size: var(--h2-size);
@@ -1675,7 +1935,8 @@ h2, .h2 {
   margin-bottom: var(--lineHeight);
 }
 
-*+h2, h2.single-line {
+*+h2,
+h2.single-line {
   margin-top: var(--lineHeight);
   padding-top: calc(var(--lineHeight) * 0.5);
   padding-bottom: calc(var(--lineHeight) * 0.5);
@@ -1686,7 +1947,10 @@ h2.single-line:first-child {
   margin-top: unset;
 }
 
-h3, .h3, h4, .h4 {
+h3,
+.h3,
+h4,
+.h4 {
   font-weight: 400;
   font-size: var(--h3-size);
   padding-top: calc(var(--baseline) * 0.75);
@@ -1694,12 +1958,14 @@ h3, .h3, h4, .h4 {
   margin-bottom: var(--baseline);
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-weight: 400;
   font-size: var(--h4-size);
 }
 
-h3.single-line, h4.single-line {
+h3.single-line,
+h4.single-line {
   padding-bottom: calc(var(--baseline) * 1.25);
   margin-bottom: 0;
 }
@@ -1729,36 +1995,47 @@ h4+h2.single-line {
   margin-top: var(--baseline)
 }
 
-h5, h6, .h5, .h6 {
+h5,
+h6,
+.h5,
+.h6 {
   font-weight: 670;
   margin-bottom: 0;
 }
 
-r-grid>r-cell.h1, r-grid>r-cell.h2, r-grid>r-cell.h3,
-r-grid>r-cell.h4, r-grid>r-cell.h5, r-grid>r-cell.h6 {
+r-grid>r-cell.h1,
+r-grid>r-cell.h2,
+r-grid>r-cell.h3,
+r-grid>r-cell.h4,
+r-grid>r-cell.h5,
+r-grid>r-cell.h6 {
   margin-bottom: 0
 }
 
 /* large headers */
-h1.large, .h1.large {
+h1.large,
+.h1.large {
   --h1-size: 4rem;
   line-height: calc(var(--lineHeight) * 3);
   font-weight: 730;
 }
 
-h1.xlarge, .h1.xlarge {
+h1.xlarge,
+.h1.xlarge {
   --h1-size: 5.5rem;
   line-height: calc(var(--lineHeight) * 4);
   font-weight: 740;
 }
 
-h1.xxlarge, .h1.xxlarge {
+h1.xxlarge,
+.h1.xxlarge {
   --h1-size: 7.5rem;
   line-height: calc(var(--lineHeight) * 5);
   font-weight: 750;
 }
 
-h1.xxxlarge, .h1.xxxlarge {
+h1.xxxlarge,
+.h1.xxxlarge {
   --h1-size: 10.5rem;
   line-height: calc(var(--lineHeight) * 7);
   font-weight: 760;
@@ -1792,37 +2069,59 @@ h1.xxxlarge, .h1.xxxlarge {
 a {
   text-decoration: underline;
   text-decoration-color: var(--text-decoration-color);
-  -webkit-text-decoration: underline var(--text-decoration-color);
-  text-decoration: underline var(--text-decoration-color);
-  text-decoration-thickness:2px;
+  text-decoration-thickness: 2px;
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-color: var(--text-decoration-color);
   white-space: nowrap;
   color: inherit;
 }
 
 a:hover {
+  text-decoration: underline;
   text-decoration-color: var(--accent-color);
-  -webkit-text-decoration: underline var(--accent-color);
-  text-decoration: underline var(--accent-color);
-  text-decoration-thickness:4px;
+  text-decoration-thickness: 4px;
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-color: var(--accent-color);
 }
 
-h1>a, h2>a, h3>a, h4>a, h5>a, h6>a,
-.h1>a, .h2>a, .h3>a, .h4>a, .h5>a, .h6>a {
+h1>a,
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a,
+.h1>a,
+.h2>a,
+.h3>a,
+.h4>a,
+.h5>a,
+.h6>a {
   text-decoration: none;
 }
 
-h1>a:hover, h2>a:hover, h3>a:hover, h4>a:hover,
-h5>a:hover, h6>a:hover, .h1>a:hover, .h2>a:hover, .h3>a:hover,
-.h4>a:hover, .h5>a:hover, .h6>a:hover {
+h1>a:hover,
+h2>a:hover,
+h3>a:hover,
+h4>a:hover,
+h5>a:hover,
+h6>a:hover,
+.h1>a:hover,
+.h2>a:hover,
+.h3>a:hover,
+.h4>a:hover,
+.h5>a:hover,
+.h6>a:hover {
   text-decoration: underline;
-  -webkit-text-decoration: underline  var(--accent-color);
-  text-decoration: underline  var(--accent-color);
-  text-decoration-thickness:4px;
+  -webkit-text-decoration: underline var(--accent-color);
+  text-decoration: underline var(--accent-color);
+  text-decoration-thickness: 4px;
   color: inherit;
 }
 
 /* image */
-img, img:first-child, img:last-child {
+img,
+img:first-child,
+img:last-child {
   display: block;
   margin-top: var(--baseline);
   margin-bottom: var(--baseline);
@@ -1836,7 +2135,8 @@ img:only-child {
   margin-top: calc(var(--baseline) * -1);
 }
 
-img.fill, img.cover {
+img.fill,
+img.cover {
   -o-object-fit: cover;
   object-fit: cover
 }
@@ -1894,7 +2194,8 @@ li.task-list-item>input[type=checkbox] {
   --checkSvgUrl: url('data:image/svg+xml;utf8,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.7 9.3L8.1 12.6L13.8 6.9L12.3 5.3L8.1 9.5L6.3 7.7L4.7 9.3Z" fill="black"/></svg>');
 }
 
-li.task-list-item>input[type=checkbox]:before, li.task-list-item>input[type=checkbox]:after {
+li.task-list-item>input[type=checkbox]:before,
+li.task-list-item>input[type=checkbox]:after {
   display: block;
   position: absolute;
   content: "X";
@@ -1922,7 +2223,8 @@ li.task-list-item>input[type=checkbox][checked]:before {
 @supports ((-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1.0), red)) or (mask-image: linear-gradient(rgba(0, 0, 0, 1.0), red))) {
 
   /* use mask so that check boxes matches --foreground-color */
-  li.task-list-item>input[type=checkbox]:before, li.task-list-item>input[type=checkbox]:after {
+  li.task-list-item>input[type=checkbox]:before,
+  li.task-list-item>input[type=checkbox]:after {
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -1952,12 +2254,14 @@ li.task-list-item>input[type=checkbox][checked]:before {
   margin-top: calc(var(--blockSpacingBottom) * -1);
 }
 
-ul, ol {
+ul,
+ol {
   list-style-position: outside;
   --list-indentation: 2em;
 }
 
-ul.compact>li, ol.compact>li {
+ul.compact>li,
+ol.compact>li {
   margin-bottom: 0;
 }
 
@@ -2048,7 +2352,8 @@ table td {
   background-position: 0 -1px;
 }
 
-table th:after, table td:after {
+table th:after,
+table td:after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -2677,13 +2982,21 @@ img.right.bottom {
   overflow: hidden;
   white-space: nowrap;
   margin: 0;
-  border-right: 1px solid var(--accent-color); /* Cursor */
+  border-right: 1px solid var(--accent-color);
+  /* Cursor */
   animation: blink-cursor 1.2s step-end infinite;
 }
 
 @keyframes blink-cursor {
-  from, to { border-color: transparent; }
-  50% { border-color: var(--accent-color); }
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--accent-color);
+  }
 }
 
 
@@ -2692,7 +3005,8 @@ img.right.bottom {
     margin-top: calc(var(--lineHeight) * 4);
   }
 
-  hr, hr:only-child {
+  hr,
+  hr:only-child {
     margin-top: unset;
   }
 }
