@@ -1930,7 +1930,6 @@ h2,
   font-weight: 700;
   font-family: var(--displayFont);
   font-size: var(--h2-size);
-  line-height: calc(var(--lineHeight) * 2);
   margin-left: calc(var(--h2-size) / -26);
   margin-bottom: var(--lineHeight);
 }
