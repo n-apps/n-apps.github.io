@@ -1,18 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
-
-@font-face {
-  font-family: 'Zalando Sans';
-  src: url('ZalandoSans[wdth,wght,slnt].woff2') format('woff2'),
-    url('ZalandoSans[wdth,wght,slnt].ttf') format('truetype');
-  font-weight: 450;
-  /* Variable weight range */
-  font-stretch: 120%;
-  /* Variable width range */
-  font-style: oblique 5deg;
-  /* Variable slant range */
-  font-display: swap;
-  /* Improves loading performance */
-}
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
 /*
 
@@ -38,8 +24,8 @@ Variables
 } */
 
 :root {
-  --sansFont: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
-  --displayFont: 'Zalando Sans', ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --sansFont: 'Google Sans', ui-sans-serif, system-ui, sans-serif;
+  --displayFont: 'Google Sans', ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
   /* line height is the basis for vertical spacing */
   --lineHeight: calc(var(--fontSize) * 1.5);
   /* horizontal and vertical spacing basis */
