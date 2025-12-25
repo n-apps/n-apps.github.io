@@ -1893,6 +1893,7 @@ h1,
   font-weight: 700;
   font-family: var(--displayFont);
   font-size: var(--h1-size);
+  letter-spacing: -0.015em;
   line-height: calc(var(--lineHeight) * 2.5);
   margin-left: calc(var(--h1-size) / -22);
   margin-top: calc(var(--lineHeight) * 2);
@@ -1916,6 +1917,7 @@ h2,
   font-weight: 700;
   font-family: var(--displayFont);
   font-size: var(--h2-size);
+  letter-spacing: -0.015em;
   margin-left: calc(var(--h2-size) / -26);
   margin-bottom: var(--lineHeight);
 }
@@ -1938,6 +1940,7 @@ h4,
 .h4 {
   font-weight: 400;
   font-size: var(--h3-size);
+  letter-spacing: -0.015em;
   padding-top: calc(var(--baseline) * 0.75);
   padding-bottom: calc(var(--baseline) * 0.25);
   margin-bottom: var(--baseline);
