@@ -50,10 +50,9 @@ Variables
   --foreground-color-rgb: 52, 52, 61;
   --foreground-color-a: 1;
   --foreground-color: rgba(var(--foreground-color-rgb), var(--foreground-color-a));
-  --background-color: #ffffff;
+  --background-color: #fcfcfc;
   --accent-color: #FF4552;
   --text-decoration-color: #d6d3d1;
-
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
